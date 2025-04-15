@@ -3,7 +3,7 @@ import { _mock } from './_mock';
 // ----------------------------------------------------------------------
 
 const NAMES = [
-  'Apple iPhone',
+  '🧼 Égouttoir à Vaisselle Multifonction Haute Efficacité // CM',
   'Samsung Galaxy',
   'Nike Air Max',
   'Adidas Ultraboost',
@@ -57,40 +57,9 @@ const CATEGORIES = [
 ];
 
 const DESCRIPTION = `
-<h5>Specifications</h5>
-<table>
-  <tbody>
-    <tr>
-      <td>Category</td>
-      <td>Mobile</td>
-    </tr>
-    <tr>
-      <td>Manufacturer</td>
-      <td>Apple</td>
-    </tr>
-    <tr>
-      <td>Warranty</td>
-      <td>12 Months</td>
-    </tr>
-    <tr>
-      <td>Serial number</td>
-      <td>358607726380311</td>
-    </tr>
-    <tr>
-      <td>Ships from</td>
-      <td>United States</td>
-    </tr>
-  </tbody>
-</table>
 
-<h5>Description</h5>
-<p>Aenean viverra rhoncus pede. Etiam feugiat lorem non metus. Quisque malesuada placerat nisl.</p>
-<ul>
-  <li> Updated with a more matte texture, perfect for casual styling. </li>
-  <li> Durable water-repellent coating. </li>
-  <li> Anti-static lining. </li>
-</ul>
-<p>Living in today’s metropolitan world of cellular phones, mobile computers and other high-tech gadgets is not just hectic but very impersonal. We make money and then invest our time and effort in making more money.</p>
+  <h5>Libérez de l’espace, organisez votre cuisine et séchez votre vaisselle en un clin d’œil</h3><p><img src="https://cdn.youcan.shop/stores/6f9d0740b3150deb70dadc525e99d7e7/others/CtlR8jGGsPYubjhKKNm8NCisgUTwdW8Onrk0NiQR.webp" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/6f9d0740b3150deb70dadc525e99d7e7/others/CtlR8jGGsPYubjhKKNm8NCisgUTwdW8Onrk0NiQR.webp">
+  <p></p> Sa structure en fer robuste et sa multifonctionnalité en font l'accessoire <strong>incontournable&nbsp;</strong>pour une cuisine ordonnée et moderne.</p><h5>✨ L’élégance et l’efficacité réunies dans votre cuisine</h3><p><img src="https://cdn.youcan.shop/stores/6f9d0740b3150deb70dadc525e99d7e7/others/lOvBQ6vU37jv7OM0gMqCtupuPxdkmB55dKeqN04i.webp" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/6f9d0740b3150deb70dadc525e99d7e7/others/lOvBQ6vU37jv7OM0gMqCtupuPxdkmB55dKeqN04i.webp"></p><p>Que ce soit pour la vaisselle, les ustensiles ou même des objets de salle de bain ou de bureau, cet étendoir compact mais spacieux transforme votre quotidien. Il allie <strong>design épuré, solidité et gain de place,</strong> tout en gardant vos espaces propres et bien organisés.</p><h5>✅ Caractéristiques du produit :</h3><p><img src="https://cdn.youcan.shop/stores/6f9d0740b3150deb70dadc525e99d7e7/others/4MUyLdhEzz1GtiJFHvbZ5JDElftWKutz7YVxQXXf.webp" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/6f9d0740b3150deb70dadc525e99d7e7/others/4MUyLdhEzz1GtiJFHvbZ5JDElftWKutz7YVxQXXf.webp"></p><p><strong>✓ Matériau :</strong> Fer enduit antirouille, ultra-résistant<br><strong>✓ Multifonction :</strong> cuisine, salle de bain, bureau, etc.<br>✓ Design vertical compact pour gagner de l’espace<br>✓ Égouttage rapide avec plateau récupérateur<br>✓ Séparation intelligente pour assiettes, couverts, tasses<br>✓ Facile à nettoyer et à assembler</p><h5>Ce que vous obtenez</h3><p><img src="https://cdn.youcan.shop/stores/6f9d0740b3150deb70dadc525e99d7e7/others/5MSnYFRMLbZ4OwHuX0A2iV5evgNWfFWm1gwugrTP.gif" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/6f9d0740b3150deb70dadc525e99d7e7/others/5MSnYFRMLbZ4OwHuX0A2iV5evgNWfFWm1gwugrTP.gif"></p><h5>🔒 Garantie 100% Satisfait ou Remboursé</h3><p>Achetez en toute tranquillité : profitez de notre <strong>garantie satisfait ou remboursé pendant 14 jours. Notre équipe est disponible 7j/7</strong> pour toute assistance ou demande d'information.</p><h5>⚠️ Attention : Quantités limitées en stock !</h3><p>Ce produit connaît une <strong>demande très élevée.</strong> Nous recevons des commandes tous les jours et le <strong>stock est presque épuisé. Ne tardez pas !</strong></p><h5>⏳ Commandez aujourd’hui et économisez 20% !</h3><p>Ne ratez pas cette offre exclusive valable jusqu’à minuit seulement :<br>Profitez de -20% dès maintenant !</p>
 `;
 
 // ----------------------------------------------------------------------

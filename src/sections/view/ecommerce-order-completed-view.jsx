@@ -11,22 +11,19 @@ import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
 
 import { Iconify } from 'src/components/iconify';
-import { varBounce, MotionContainer } from 'src/components/animate';
 
 // ----------------------------------------------------------------------
 
 export function EcommerceOrderCompletedView() {
   return (
     <Container
-      component={MotionContainer}
+
       sx={{
         textAlign: 'center',
         py: { xs: 10, md: 15 },
       }}
     >
-      <m.div variants={varBounce().in}>
-        <Box sx={{ fontSize: 128 }}>🎉</Box>
-      </m.div>
+
 
       <Box sx={{ my: 5 }}>
         <Typography variant="h3" sx={{ mb: 2 }}>

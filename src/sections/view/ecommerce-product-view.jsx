@@ -46,7 +46,7 @@ export function EcommerceProductView({ product }) {
             <Markdown
               content={product?.description || ''}
               sx={{
-                my: 10,
+                my: 8,
                 '& table': {
                   '& td': { px: 2, typography: 'body2' },
                   '& td:first-of-type': { color: 'text.secondary' },

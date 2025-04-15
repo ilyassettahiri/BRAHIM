@@ -65,7 +65,7 @@ export function EcommerceProductDetailsInfo({
 
       </Stack>
 
-      <ProductOptionPicker
+      {/* <ProductOptionPicker
         color={color}
         memory={memory}
         onSelectColor={(newValue) => setColor(newValue)}
@@ -75,7 +75,7 @@ export function EcommerceProductDetailsInfo({
           memory: MEMORY_OPTIONS,
         }}
         sx={{ my: 5 }}
-      />
+      /> */}
 
 
 
@@ -95,7 +95,7 @@ export function EcommerceProductDetailsInfo({
             variant="contained"
             sx={{ width: { xs: 1, sm: 'auto' } }}
           >
-            Buy now
+            commander maintenant
           </Button>
 
       </Stack>
