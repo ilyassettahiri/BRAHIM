@@ -10,6 +10,7 @@ export function ProductPrice({ price, priceSale = 0, sx, ...other }) {
       gap={0.5}
       component="span"
       display="flex"
+
       sx={{ typography: 'subtitle2', ...sx }}
       {...other}
     >

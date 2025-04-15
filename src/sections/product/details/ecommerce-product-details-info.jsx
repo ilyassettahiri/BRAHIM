@@ -55,13 +55,13 @@ export function EcommerceProductDetailsInfo({
 
 
       <Stack spacing={1} sx={{ mb: 2 }}>
-        <Typography variant="h4"> {name} </Typography>
+        <Typography variant="h3"> {name} </Typography>
 
 
       </Stack>
 
-      <Stack spacing={2}>
-        <ProductPrice price={price} priceSale={priceSale} sx={{ typography: 'h5' }} />
+      <Stack spacing={2} sx={{ my: 5 }}>
+        <ProductPrice price={price} priceSale={priceSale} sx={{ typography: 'h4',  }} />
 
       </Stack>
 
@@ -79,13 +79,49 @@ export function EcommerceProductDetailsInfo({
 
 
 
+      <Stack spacing={2} sx={{ my: 5 }}>
+
+             <Typography variant="body"> Informations client             </Typography>
+              <Box
+                rowGap={2.5}
+                columnGap={2}
+                display="grid"
+                gridTemplateColumns={{ xs: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
+              >
+                    {/* Full Name input */}
+                  <TextField
+                    fullWidth
+                    name="personal.fullName"
+                    label="Nom et Prénom"
+                    variant="outlined"
+                  />
+
+                  {/* Phone input */}
+                  <TextField
+                    fullWidth
+                    name="personal.phone"
+                    label="Téléphone"
+                    variant="outlined"
+                  />
+
+                  {/* City input, spanning two columns on medium screens */}
+                  <TextField
+                    fullWidth
+                    name="personal.city"
+                    label="Ville"
+                    variant="outlined"
+                    sx={{ gridColumn: { md: '1 / span 2' } }}
+                  />
+
+                </Box>
+
+      </Stack>
 
 
 
 
 
-
-      <Stack spacing={2}>
+      <Stack spacing={2} sx={{ my: 5 }}>
 
           <Button
             component={RouterLink}
@@ -93,14 +129,14 @@ export function EcommerceProductDetailsInfo({
             size="large"
             color="primary"
             variant="contained"
-            sx={{ width: { xs: 1, sm: 'auto' } }}
+            sx={{ typography: 'h5', py: 3.5, width: { xs: 1, sm: 'auto' } }}
           >
             commander maintenant
           </Button>
 
       </Stack>
 
-      <Divider sx={{ borderStyle: 'dashed', my: 3 }} />
+
 
 
     </Box>

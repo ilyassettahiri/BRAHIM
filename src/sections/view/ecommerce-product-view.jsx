@@ -5,6 +5,7 @@ import Container from '@mui/material/Container';
 
 import { useBoolean } from 'src/hooks/use-boolean';
 
+import Divider from '@mui/material/Divider';
 
 
 import { Markdown } from 'src/components/markdown';
@@ -22,10 +23,16 @@ export function EcommerceProductView({ product }) {
 
   return (
     <>
-      <Container sx={{ overflow: 'hidden' }}>
+      <Container  maxWidth={false} sx={{ overflow: 'hidden',
+
+            paddingLeft: {xs: '10px', lg: '100px' },
+            paddingRight: {xs: '10px', lg: '100px' },
+
+            mt: {xs: 1, lg: 2 },
+      }}>
 
 
-        <Grid container spacing={{ xs: 5, md: 8 }}>
+        <Grid container spacing={{ xs: 5, md: 5 }}>
           <Grid xs={12} md={6} lg={7}>
             <EcommerceProductDetailsCarousel images={product?.images || []} />
           </Grid>
@@ -39,16 +46,20 @@ export function EcommerceProductView({ product }) {
 
             />
           </Grid>
+
+
         </Grid>
 
-        <Grid container columnSpacing={{ md: 8 }}>
-          <Grid xs={12} md={6} lg={7}>
+        <Divider sx={{my: 3 }} />
+
+        <Grid container columnSpacing={{ md: 12 }}>
+          <Grid xs={12} md={12} lg={12}>
             <Markdown
               content={product?.description || ''}
               sx={{
-                my: 8,
+                mt: 1,
                 '& table': {
-                  '& td': { px: 2, typography: 'body2' },
+                  '& td': { px: 1, typography: 'body2' },
                   '& td:first-of-type': { color: 'text.secondary' },
                   'tbody tr:nth-of-type(odd)': { bgcolor: 'transparent' },
                 },
