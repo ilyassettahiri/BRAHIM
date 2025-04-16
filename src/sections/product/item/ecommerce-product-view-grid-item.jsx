@@ -1,3 +1,5 @@
+
+
 import Fab from '@mui/material/Fab';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
@@ -16,6 +18,9 @@ import { ProductRating } from '../../components/product-rating';
 // ----------------------------------------------------------------------
 
 export function EcommerceProductViewGridItem({ product, sx, ...other }) {
+
+
+
   return (
     <Box
       sx={{
@@ -73,7 +78,7 @@ export function EcommerceProductViewGridItem({ product, sx, ...other }) {
 
         <Link
           component={RouterLink}
-          href={paths.eCommerce.product}
+          href={`/products/${product.id}/`}
           color="inherit"
           variant="body2"
           noWrap

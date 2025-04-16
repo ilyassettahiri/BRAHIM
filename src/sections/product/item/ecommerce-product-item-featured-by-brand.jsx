@@ -52,7 +52,7 @@ export function EcommerceProductItemFeaturedByBrand({ product, sx, ...other }) {
         <Box display="flex" flexGrow={1} alignItems="flex-end" justifyContent="flex-end">
           <Button
             component={RouterLink}
-            href={paths.eCommerce.product}
+            href={`/products/${product.id}/`}
             size="small"
             color="inherit"
             variant="outlined"

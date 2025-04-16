@@ -18,7 +18,7 @@ export function EcommerceLandingFeaturedProducts({ sx, largeProducts, smallProdu
       }}
       {...other}
     >
-      <Container>
+      <>
         <Typography
           variant="h3"
           sx={{
@@ -68,7 +68,7 @@ export function EcommerceLandingFeaturedProducts({ sx, largeProducts, smallProdu
             </Box>
           </Grid>
         </Grid>
-      </Container>
+      </>
     </Box>
   );
 }

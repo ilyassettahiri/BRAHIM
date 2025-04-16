@@ -32,7 +32,7 @@ export function EcommerceLandingHotDealToday({ products, sx, ...other }) {
       }}
       {...other}
     >
-      <Container>
+      <>
         <Box
           gap={3}
           display="flex"
@@ -85,7 +85,7 @@ export function EcommerceLandingHotDealToday({ products, sx, ...other }) {
             display: { xs: 'inline-flex', md: 'none' },
           }}
         />
-      </Container>
+      </>
     </Box>
   );
 }

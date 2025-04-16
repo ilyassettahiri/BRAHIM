@@ -5,10 +5,10 @@ import { EcommerceProductsView } from 'src/sections/view/ecommerce-products-view
 
 // ----------------------------------------------------------------------
 
-export const metadata = { title: `Product list | E-commerce - ${CONFIG.appName}` };
+export const metadata = { title: `Products` };
 
 export default function Page() {
   return (
-    <EcommerceProductsView products={_products.slice(0, 16)} bestSellers={_products.slice(0, 3)} />
+    <EcommerceProductsView products={_products.slice(0, 16)}  />
   );
 }

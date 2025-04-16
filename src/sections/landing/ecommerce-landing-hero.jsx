@@ -50,18 +50,7 @@ export function EcommerceLandingHero({ sx, ...other }) {
       }}
       {...other}
     >
-      <Box
-        component="img"
-        alt="Texture"
-        src={`${CONFIG.assetsDir}/assets/background/texture-2.webp`}
-        sx={{
-          top: 0,
-          right: 0,
-          height: 1,
-          width: 'auto',
-          position: 'absolute',
-        }}
-      />
+
 
       <Container sx={{ position: 'relative' }}>
         <Carousel carousel={carousel}>
@@ -154,21 +143,19 @@ export function CarouselItem({ product, selected }) {
           textAlign: { xs: 'center', md: 'unset' },
         }}
       >
-        <Label variant="filled" color="warning" sx={{ mb: 2 }}>
-          {product.label}
-        </Label>
+
 
         <Typography component="h3" variant="h2" sx={{ mb: 2 }}>
-          {product.name}
+          Best Selling Product
         </Typography>
 
         <Typography variant="body2" sx={{ ...maxLine({ line: 2 }), mb: 5, opacity: 0.72 }}>
-          {product.caption}
+        Best Selling Product
         </Typography>
 
         <Button
           component={RouterLink}
-          href={paths.eCommerce.product}
+          href={`/products/${product.id}/`}
           size="large"
           color="primary"
           variant="contained"

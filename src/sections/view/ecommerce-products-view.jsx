@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -11,8 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
-import ToggleButton from '@mui/material/ToggleButton';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+
 import Pagination, { paginationClasses } from '@mui/material/Pagination';
 
 import { useBoolean } from 'src/hooks/use-boolean';
@@ -21,15 +20,9 @@ import { useSetState } from 'src/hooks/use-set-state';
 import { Iconify } from 'src/components/iconify';
 
 import { EcommerceFilters } from '../ecommerce-filters';
-import { EcommerceProductViewListItem } from '../product/item/ecommerce-product-view-list-item';
 import { EcommerceProductViewGridItem } from '../product/item/ecommerce-product-view-grid-item';
 
-// ----------------------------------------------------------------------
 
-const VIEW_OPTIONS = [
-  { value: 'list', icon: <Iconify icon="carbon:list-boxes" /> },
-  { value: 'grid', icon: <Iconify icon="carbon:grid" /> },
-];
 
 const SORT_OPTIONS = [
   { value: 'latest', label: 'Latest' },
@@ -39,28 +32,22 @@ const SORT_OPTIONS = [
 
 // ----------------------------------------------------------------------
 
-export function EcommerceProductsView({ products, bestSellers }) {
+export function EcommerceProductsView({ products }) {
   const openMobile = useBoolean();
+
+
 
   const [sort, setSort] = useState('latest');
 
-  const [viewMode, setViewMode] = useState('grid');
 
   const filters = useSetState({
-    brands: ['Apple'],
-    category: '',
+
     rating: null,
-    inStock: false,
-    shipping: [],
-    tags: [],
+
     price: [0, 0],
   });
 
-  const handleChangeViewMode = useCallback((event, newAlignment) => {
-    if (newAlignment !== null) {
-      setViewMode(newAlignment);
-    }
-  }, []);
+
 
   const handleChangeSort = useCallback((event) => {
     setSort(event.target.value);
@@ -68,7 +55,7 @@ export function EcommerceProductsView({ products, bestSellers }) {
 
   const renderList = (
     <>
-      {viewMode === 'grid' ? (
+
         <Box
           rowGap={4}
           columnGap={3}
@@ -83,13 +70,7 @@ export function EcommerceProductsView({ products, bestSellers }) {
             <EcommerceProductViewGridItem key={product.id} product={product} />
           ))}
         </Box>
-      ) : (
-        <Stack spacing={4}>
-          {products?.map((product) => (
-            <EcommerceProductViewListItem key={product.id} product={product} />
-          ))}
-        </Stack>
-      )}
+
 
       <Pagination
         count={10}
@@ -106,7 +87,12 @@ export function EcommerceProductsView({ products, bestSellers }) {
 
 
   return (
-    <Container>
+    <Container maxWidth={false} sx={{ overflow: 'hidden',
+
+      paddingLeft: {xs: '10px', lg: '100px' },
+      paddingRight: {xs: '10px', lg: '100px' },
+
+    }}>
       <Box display="flex" alignItems="center" sx={{ py: 5 }}>
 
         <Button
@@ -159,20 +145,7 @@ export function EcommerceProductsView({ products, bestSellers }) {
           }}
         >
           <Box display="flex" alignItems="center" justifyContent="space-between" sx={{ mb: 5 }}>
-            <ToggleButtonGroup
-              exclusive
-              size="small"
-              value={viewMode}
-              onChange={handleChangeViewMode}
-              sx={{ borderColor: 'transparent' }}
-            >
-              {VIEW_OPTIONS.map((option) => (
-                <ToggleButton key={option.value} value={option.value}>
-                  {option.icon}
-                </ToggleButton>
-              ))}
-            </ToggleButtonGroup>
-
+            <Box/>
             <FormControl size="small" hiddenLabel sx={{ width: 120 }}>
               <Select value={sort} onChange={handleChangeSort} inputProps={{ id: `sort-select` }}>
                 {SORT_OPTIONS.map((option) => (

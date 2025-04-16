@@ -15,7 +15,7 @@ import { ProductPrice } from '../../components/product-price';
 
 export function EcommerceProductItemHot({ product, isHot = false, sx }) {
   return (
-    <Link component={RouterLink} href={paths.eCommerce.product} color="inherit" underline="none">
+    <Link component={RouterLink} href={`/products/${product.id}/`} color="inherit" underline="none">
       <Paper
         variant="outlined"
         sx={{

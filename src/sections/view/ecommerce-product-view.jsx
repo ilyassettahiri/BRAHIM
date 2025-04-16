@@ -1,7 +1,11 @@
 'use client';
 
+import { useState, useCallback, useEffect } from 'react';
+import { _products } from 'src/_mock';
+
 import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
+import { EcommerceLandingHotDealToday } from 'src/sections/landing/ecommerce-landing-hot-deal-today';
 
 import { useBoolean } from 'src/hooks/use-boolean';
 
@@ -18,15 +22,17 @@ import { EcommerceProductDetailsCarousel } from '../product/details/ecommerce-pr
 
 export function EcommerceProductView({ product }) {
 
-
+  useEffect(() => {
+    console.log('Product:', product);
+  }, [product]);
 
 
   return (
     <>
       <Container  maxWidth={false} sx={{ overflow: 'hidden',
 
-            paddingLeft: {xs: '15px', lg: '200px' },
-            paddingRight: {xs: '15px', lg: '200px' },
+            paddingLeft: {xs: '10px', lg: '100px' },
+            paddingRight: {xs: '10px', lg: '100px' },
 
             mt: {xs: 1, lg: 2 },
       }}>
@@ -52,7 +58,7 @@ export function EcommerceProductView({ product }) {
 
         <Divider sx={{my: 3 }} />
 
-        <Grid container columnSpacing={{ md: 12 }}>
+        <Grid container columnSpacing={{ md: 12 }} sx={{ textAlign: { xs: 'center', md: 'center' } }}>
           <Grid xs={12} md={12} lg={12}>
             <Markdown
               content={product?.description || ''}
@@ -67,6 +73,12 @@ export function EcommerceProductView({ product }) {
             />
           </Grid>
         </Grid>
+
+        <Divider sx={{my: 3 }} />
+
+                  <EcommerceLandingHotDealToday products={_products} />
+
+
       </Container>
 
 

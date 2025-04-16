@@ -4,7 +4,7 @@ import { EcommerceOrderCompletedView } from 'src/sections/view/ecommerce-order-c
 
 // ----------------------------------------------------------------------
 
-export const metadata = { title: `Order completed | E-commerce - ${CONFIG.appName}` };
+export const metadata = { title: `Order completed` };
 
 export default function Page() {
   return <EcommerceOrderCompletedView />;
