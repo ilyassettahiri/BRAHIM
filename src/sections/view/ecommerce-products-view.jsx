@@ -23,7 +23,6 @@ import { Iconify } from 'src/components/iconify';
 import { EcommerceFilters } from '../ecommerce-filters';
 import { EcommerceProductViewListItem } from '../product/item/ecommerce-product-view-list-item';
 import { EcommerceProductViewGridItem } from '../product/item/ecommerce-product-view-grid-item';
-import { EcommerceProductItemBestSellers } from '../product/item/ecommerce-product-item-best-sellers';
 
 // ----------------------------------------------------------------------
 
@@ -105,21 +104,11 @@ export function EcommerceProductsView({ products, bestSellers }) {
     </>
   );
 
-  const renderListBestSellers = (
-    <Stack spacing={3}>
-      <Typography variant="h6">Best sellers</Typography>
-      {bestSellers?.map((product) => (
-        <EcommerceProductItemBestSellers key={product.id} product={product} />
-      ))}
-    </Stack>
-  );
 
   return (
     <Container>
       <Box display="flex" alignItems="center" sx={{ py: 5 }}>
-        <Typography variant="h3" sx={{ flexGrow: 1 }}>
-          Catalog
-        </Typography>
+
         <Button
           color="inherit"
           variant="contained"
@@ -159,7 +148,7 @@ export function EcommerceProductsView({ products, bestSellers }) {
             }}
           />
 
-          {renderListBestSellers}
+
         </Stack>
 
         <Box

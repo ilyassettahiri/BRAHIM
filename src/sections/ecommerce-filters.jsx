@@ -27,49 +27,9 @@ export function EcommerceFilters({ open, onClose, options, filters }) {
 
   const renderContent = (
     <>
-      <Block title="Category">
-        <Box gap={1} display="flex" flexDirection="column" sx={{ pt: 1.5 }}>
-          {options.categories.map((option) => (
-            <Box
-              key={option}
-              gap={1}
-              display="flex"
-              alignItems="center"
-              onClick={() => setState({ category: option })}
-              sx={{
-                cursor: 'pointer',
-                typography: 'body2',
-                ...(state.category === option && {
-                  fontWeight: 'fontWeightBold',
-                }),
-              }}
-            >
-              <Iconify width={14} icon="solar:alt-arrow-right-outline" sx={{ ml: -0.25 }} />
-              {option}
-            </Box>
-          ))}
-        </Box>
-      </Block>
 
-      <Block title="Brand">
-        <Box display="flex" flexDirection="column" sx={{ pt: 1 }}>
-          {options.brands.map((option) => (
-            <FormControlLabel
-              key={option}
-              control={
-                <Checkbox
-                  size="small"
-                  value={option}
-                  checked={state.brands.includes(option)}
-                  onChange={() => setState({ brands: getSelected(state.brands, option) })}
-                  inputProps={{ id: `${option}-checkbox` }}
-                />
-              }
-              label={option}
-            />
-          ))}
-        </Box>
-      </Block>
+
+
 
       <Block title="Price">
         <Box gap={2} display="flex" alignItems="center" sx={{ pt: 2 }}>
@@ -93,25 +53,6 @@ export function EcommerceFilters({ open, onClose, options, filters }) {
         </Box>
       </Block>
 
-      <Block title="Shipping">
-        <Box display="flex" flexDirection="column" sx={{ pt: 1 }}>
-          {options.shippings.map((option) => (
-            <FormControlLabel
-              key={option}
-              control={
-                <Checkbox
-                  size="small"
-                  value={option}
-                  checked={state.shipping.includes(option)}
-                  onChange={() => setState({ shipping: getSelected(state.shipping, option) })}
-                  inputProps={{ id: `${option}-checkbox` }}
-                />
-              }
-              label={option}
-            />
-          ))}
-        </Box>
-      </Block>
 
       <Block title="Ratings">
         <Box display="flex" flexDirection="column">
@@ -140,39 +81,7 @@ export function EcommerceFilters({ open, onClose, options, filters }) {
         </Box>
       </Block>
 
-      <FormControlLabel
-        control={
-          <Switch
-            checked={state.inStock}
-            onChange={(event) => setState({ inStock: event.target.checked })}
-            inputProps={{ id: 'in-stock-switch' }}
-          />
-        }
-        label="Only in stock"
-        sx={{
-          [`& .${formControlLabelClasses.label}`]: { typography: 'subtitle1' },
-        }}
-      />
 
-      <Block title="Tags">
-        <Box gap={1} display="flex" flexWrap="wrap" sx={{ pt: 2 }}>
-          {options.tags.map((option) => (
-            <Chip
-              key={option}
-              size="small"
-              label={option}
-              variant="outlined"
-              onClick={() => setState({ tags: getSelected(state.tags, option) })}
-              sx={{
-                ...(state.tags.includes(option) && {
-                  bgcolor: 'action.selected',
-                  fontWeight: 'fontWeightBold',
-                }),
-              }}
-            />
-          ))}
-        </Box>
-      </Block>
 
       <Button
         fullWidth

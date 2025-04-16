@@ -25,8 +25,8 @@ export function EcommerceProductView({ product }) {
     <>
       <Container  maxWidth={false} sx={{ overflow: 'hidden',
 
-            paddingLeft: {xs: '10px', lg: '100px' },
-            paddingRight: {xs: '10px', lg: '100px' },
+            paddingLeft: {xs: '15px', lg: '200px' },
+            paddingRight: {xs: '15px', lg: '200px' },
 
             mt: {xs: 1, lg: 2 },
       }}>

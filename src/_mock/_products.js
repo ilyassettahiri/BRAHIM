@@ -3,7 +3,7 @@ import { _mock } from './_mock';
 // ----------------------------------------------------------------------
 
 const NAMES = [
-  '🧼 Égouttoir à Vaisselle Multifonction Haute Efficacité // CM',
+  '🧼 Égouttoir à Vaisselle Multifonction Haute Efficacité',
   'Samsung Galaxy',
   'Nike Air Max',
   'Adidas Ultraboost',

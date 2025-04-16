@@ -31,9 +31,9 @@ export const pageLinks = [
 // ----------------------------------------------------------------------
 
 export const navData = [
-  { title: 'Home', path: '/' },
+  { title: 'Accueil', path: '/' },
 
-
+  { title: 'Collection', path: '/products' },
 ];
 
 
