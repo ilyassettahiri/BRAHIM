@@ -72,16 +72,7 @@ export function EcommerceProductsView({ products }) {
         </Box>
 
 
-      <Pagination
-        count={10}
-        sx={{
-          mt: 10,
-          mb: 5,
-          [`& .${paginationClasses.ul}`]: {
-            justifyContent: 'center',
-          },
-        }}
-      />
+
     </>
   );
 

@@ -2,20 +2,21 @@
 import { CONFIG } from 'src/config-global';
 
 
-const NAMES = [
-  '🧼 Égouttoir à Vaisselle Multifonction Haute Efficacité',
-  'title 2',
-  'title 3',
-  'title 4',
-  'title 5',
-  'title 6',
-  'title 7',
-  'title 8',
-  'title 9',
-
-
-
+const PRODUCTS_META = [
+  {
+    name: '🧼 Égouttoir à Vaisselle Multifonction Haute Efficacité',
+    category: 'Accessoires',
+  },
+  { name: 'title 2', category: 'Chaussures Classiques' },
+  { name: 'title 3', category: 'Bottines' },
+  { name: 'title 4', category: 'Baskets et Espadrilles' },
+  { name: 'title 5', category: 'Mocassins' },
+  { name: 'title 6', category: 'Sandales' },
+  { name: 'title 7', category: 'Femmes' },
+  { name: 'title 8', category: 'Accessoires' },
+  { name: 'title 9', category: 'Sandales' },
 ];
+
 
 const CATEGORIES = [
   'Chaussures Classiques',
@@ -41,6 +42,70 @@ const PRICES = [
 
 ];
 
+const PRODUCT_GALLERIES = [
+  // 🧼 Égouttoir …
+  [
+    `${CONFIG.assetsDir}/assets/products/p1/1.webp`,
+    `${CONFIG.assetsDir}/assets/products/p1/2.webp`,
+    `${CONFIG.assetsDir}/assets/products/p1/3.webp`,
+  ],
+
+  // title 2
+  [
+    `${CONFIG.assetsDir}/assets/products/p2/1.webp`,
+    `${CONFIG.assetsDir}/assets/products/p2/2.webp`,
+    `${CONFIG.assetsDir}/assets/products/p2/3.webp`,
+  ],
+
+  // title 3
+  [
+    `${CONFIG.assetsDir}/assets/products/p3/1.webp`,
+    `${CONFIG.assetsDir}/assets/products/p3/2.webp`,
+    `${CONFIG.assetsDir}/assets/products/p3/3.webp`,
+
+  ],
+
+  [
+    `${CONFIG.assetsDir}/assets/products/p4/1.webp`,
+    `${CONFIG.assetsDir}/assets/products/p4/2.webp`,
+    `${CONFIG.assetsDir}/assets/products/p4/3.webp`,
+
+  ],
+
+
+  [
+    `${CONFIG.assetsDir}/assets/products/p5/1.webp`,
+    `${CONFIG.assetsDir}/assets/products/p5/2.webp`,
+    `${CONFIG.assetsDir}/assets/products/p5/3.webp`,
+
+  ],
+
+
+  [
+    `${CONFIG.assetsDir}/assets/products/p6/1.webp`,
+    `${CONFIG.assetsDir}/assets/products/p6/2.webp`,
+    `${CONFIG.assetsDir}/assets/products/p6/3.webp`,
+
+  ],
+
+
+
+  [
+    `${CONFIG.assetsDir}/assets/products/p7/1.webp`,
+    `${CONFIG.assetsDir}/assets/products/p7/2.webp`,
+    `${CONFIG.assetsDir}/assets/products/p7/3.webp`,
+
+  ],
+
+  [
+    `${CONFIG.assetsDir}/assets/products/p8/1.webp`,
+    `${CONFIG.assetsDir}/assets/products/p8/2.webp`,
+    `${CONFIG.assetsDir}/assets/products/p8/3.webp`,
+
+  ],
+
+
+];
 
 const DESCRIPTION = [
   `
@@ -109,12 +174,6 @@ const DESCRIPTION = [
 const _ids = Array.from({ length: 40 }, (_, i) => `p${i + 1}`);
 const id = (index) => _ids[index];
 
-const image = {
-  cover: (i) =>
-    `${CONFIG.assetsDir}/assets/images/cover/cover-${i + 1}.webp`,
-  product: (i) =>
-    `${CONFIG.assetsDir}/assets/images/z-product/product-${i + 1}.webp`,
-};
 
 
 export const _productsCarousel = [
@@ -129,16 +188,20 @@ export const _productsCarousel = [
 ];
 
 
-export const _products = Array.from({ length: 8 }, (_, i) => ({
-  id: id(i),
-  stock: 100,
-  name: NAMES[i],
-  description: DESCRIPTION[i],
-  category: CATEGORIES[i],
-  price: PRICES[i],
-  sold: Math.round(100 / (i + 1)),
-  coverUrl: image.product(i),
+export const _products = PRODUCTS_META.map((meta, i) => {
+  const gallery = PRODUCT_GALLERIES[i] ?? [];
+  const cover   = gallery[0] ?? `${CONFIG.assetsDir}/assets/placeholder.webp`;
 
-  label: ['sale', 'new', 'sale', 'sale'][i] || '',
-  images: Array.from({ length: 8 }, (_, j) => image.product(j + 1)),
-}));
+  return {
+    id: id(i),
+    stock: 100,
+    name: meta.name,              // ✅ now meta is defined
+    category: meta.category,
+    description: DESCRIPTION[i % DESCRIPTION.length],
+    price: PRICES[i % PRICES.length],
+    sold: Math.round(100 / (i + 1)),
+    coverUrl: cover,
+    images: gallery.length ? gallery : [cover],
+    label: ['sale', 'new', 'sale', 'sale'][i % 4] || '',
+  };
+});

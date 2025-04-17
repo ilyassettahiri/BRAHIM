@@ -66,22 +66,15 @@ export function FemmesView({ products }) {
             md: 'repeat(4, 1fr)',
           }}
         >
-          {products?.map((product) => (
-            <EcommerceProductViewGridItem key={product.id} product={product} />
-          ))}
+          {products
+            ?.filter((p) => p.category === 'Femmes') // ← keep only “Accessoires”
+            .map((product) => (
+              <EcommerceProductViewGridItem key={product.id} product={product} />
+            ))}
         </Box>
 
 
-      <Pagination
-        count={10}
-        sx={{
-          mt: 10,
-          mb: 5,
-          [`& .${paginationClasses.ul}`]: {
-            justifyContent: 'center',
-          },
-        }}
-      />
+
     </>
   );
 
