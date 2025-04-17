@@ -14,15 +14,15 @@ export function ProductRating({ value, label, sx, ...other }) {
         precision={0.5}
         sx={{
           [`& .${svgIconClasses.root}`]: {
-            width: 12,
-            height: 12,
+            width: 20,
+            height: 20,
           },
         }}
       />
 
       {label && (
-        <Typography variant="caption" sx={{ color: 'text.disabled' }}>
-          {label}
+        <Typography variant="body" sx={{ color: 'text.disabled' }}>
+          ({label})
         </Typography>
       )}
     </Box>

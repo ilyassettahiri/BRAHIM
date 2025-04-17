@@ -11,7 +11,6 @@ import {
   CarouselArrowBasicButtons,
 } from 'src/components/carousel';
 
-import { ProductCountdownBlock } from '../components/product-countdown-block';
 import { EcommerceProductItemHot } from '../product/item/ecommerce-product-item-hot';
 
 // ----------------------------------------------------------------------
@@ -45,19 +44,17 @@ export function EcommerceLandingHotDealToday({ products, sx, ...other }) {
           sx={{ mb: { xs: 5, md: 8 } }}
         >
           <Typography variant="h3" sx={{ textAlign: { xs: 'center', md: 'unset' } }}>
-            🔥 Offre du jour
+
+
+
+
+
+
+
+
           </Typography>
 
-          <ProductCountdownBlock
-            hidejours
-            labelPlacement="inline"
-            expired={new Date(fAdd({ heures: 1, minutes: 30 }))}
-            width={44}
-            height={32}
-            slotProps={{
-              value: { bgcolor: 'text.primary', color: 'background.paper' },
-            }}
-          />
+
 
           <Box flexGrow={1} />
 

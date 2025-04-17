@@ -91,7 +91,7 @@ export function EcommerceProductViewGridItem({ product, sx, ...other }) {
                 <ProductPrice price={product.price.prixApres} priceSale={product.price.prixAvant} />
 
 
-        <ProductRating value={product.ratingNumber} label={`${product.sold} sold`} />
+        <ProductRating value="5" label={`${product.sold} `} />
       </Box>
     </Box>
   );

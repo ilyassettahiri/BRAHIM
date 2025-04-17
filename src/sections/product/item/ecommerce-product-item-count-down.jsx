@@ -10,7 +10,6 @@ import { fCurrency } from 'src/utils/format-number';
 
 import { varAlpha } from 'src/theme/styles';
 
-import { ProductCountdownBlock } from '../../components/product-countdown-block';
 
 // ----------------------------------------------------------------------
 

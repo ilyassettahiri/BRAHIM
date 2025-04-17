@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import { Iconify } from 'src/components/iconify';
 import { ProductPrice } from '../../components/product-price';
 import { ButtonGroup } from '@mui/material';
+import { ProductRating } from '../../components/product-rating';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -16,10 +17,9 @@ import Typography from '@mui/material/Typography';
 import { ProductOptionPicker } from '../../components/product-option-picker';
 
 const COLOR_OPTIONS = [
-  { label: '#FA541C', value: 'red' },
-  { label: '#754FFE', value: 'violet' },
-  { label: '#00B8D9', value: 'cyan' },
-  { label: '#36B37E', value: 'green' },
+  { label: '#000000', value: 'noir' },
+  { label: '#8B4513', value: 'marron' },
+
 ];
 
 
@@ -96,6 +96,8 @@ export function EcommerceProductDetailsInfo({ sx, name, price,id, priceSale, ...
     <Box sx={sx} {...other}>
       <Stack spacing={1} sx={{ mb: 2 }}>
         <Typography variant="h3">{name}</Typography>
+                <ProductRating value="5" label="34" />
+
       </Stack>
 
       {/* Additional components like ProductPrice */}
@@ -169,19 +171,21 @@ export function EcommerceProductDetailsInfo({ sx, name, price,id, priceSale, ...
               variant="outlined"
               aria-label="quantity selector"
               sx={{
-                // make all buttons' outlines white
                 '& .MuiButtonGroup-grouped': {
-                  borderColor: '#DDD',
-                  color: 'common.black',
-                },
-                // ensure the wrapper outline is also white
-                '& fieldset': {
-                  borderColor: '#DDD',
-                },
+                    borderColor: '#DDD',
+                  },
+                  // make every label black, including the disabled one
+                  '& .MuiButton-root': {
+                    color: 'common.black',
+                  },
+                  '& .MuiButton-root.Mui-disabled': {
+                    color: 'common.black',
+                  },
+
               }}
             >
               <Button onClick={handleDecrement} >–</Button>
-              <Button disabled sx={{ minWidth: 48 }}>
+              <Button disabled sx={{ minWidth: 48 }} >
                 {quantity}
               </Button>
               <Button onClick={handleIncrement}>+</Button>
