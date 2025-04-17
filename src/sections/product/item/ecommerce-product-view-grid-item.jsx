@@ -36,7 +36,7 @@ export function EcommerceProductViewGridItem({ product, sx, ...other }) {
       {(product.label === 'new' || product.label === 'sale') && (
         <Box gap={1} display="flex" sx={{ position: 'absolute', top: 8, right: 8, zIndex: 9 }}>
           {product.label === 'new' && <Label color="info">NOUVEAU</Label>}
-          {product.label === 'sale' && <Label color="error">SOLDES</Label>}
+          {product.label === 'sale' && <Label color="error">SOLDE</Label>}
         </Box>
       )}
 
@@ -87,7 +87,9 @@ export function EcommerceProductViewGridItem({ product, sx, ...other }) {
           {product.name}
         </Link>
 
-        <ProductPrice price={product.price} priceSale={product.priceSale} />
+
+                <ProductPrice price={product.price.prixApres} priceSale={product.price.prixAvant} />
+
 
         <ProductRating value={product.ratingNumber} label={`${product.sold} sold`} />
       </Box>

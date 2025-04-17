@@ -41,9 +41,9 @@ export function EcommerceLandingHero({ sx, ...other }) {
       component="section"
       sx={{
         ...bgGradient({
-          color: `to bottom, ${varAlpha(theme.vars.palette.common.blackChannel, 0.8)}, ${varAlpha(theme.vars.palette.common.blackChannel, 0.8)}`,
-          imgUrl: `${CONFIG.assetsDir}/assets/background/overlay-2.webp`,
-        }),
+          color: `to bottom,
+          ${varAlpha(theme.vars.palette.common.whiteChannel, 0.1)},
+          ${varAlpha(theme.vars.palette.common.blackChannel, 0.15)}`,        }),
         overflow: 'hidden',
         position: 'relative',
         ...sx,
@@ -52,7 +52,12 @@ export function EcommerceLandingHero({ sx, ...other }) {
     >
 
 
-      <Container sx={{ position: 'relative' }}>
+      <Container maxWidth={false} sx={{ position: 'relative',
+
+            paddingLeft: {xs: '10px', lg: '100px' },
+            paddingRight: {xs: '10px', lg: '100px' },
+
+      }}>
         <Carousel carousel={carousel}>
           {_productsCarousel.map((product, index) => (
             <CarouselItem
@@ -69,45 +74,9 @@ export function EcommerceLandingHero({ sx, ...other }) {
           justifyContent="space-between"
           sx={{ transform: 'translateY(-64px)' }}
         >
-          <CarouselDotButtons
-            variant="rounded"
-            scrollSnaps={carousel.dots.scrollSnaps}
-            selectedIndex={carousel.dots.selectedIndex}
-            onClickDot={carousel.dots.onClickDot}
-            sx={{ color: 'primary.main' }}
-          />
 
-          <CarouselArrowBasicButtons
-            {...carousel.arrows}
-            options={carousel.options}
-            slotProps={{
-              prevBtn: {
-                svgIcon: (
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m15 5l-6 7l6 7"
-                  />
-                ),
-              },
-              nextBtn: {
-                svgIcon: (
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m9 5l6 7l-6 7"
-                  />
-                ),
-              },
-            }}
-            sx={{ gap: 1, color: 'primary.main' }}
-          />
+
+
         </Box>
       </Container>
     </Box>
@@ -119,15 +88,16 @@ export function EcommerceLandingHero({ sx, ...other }) {
 export function CarouselItem({ product, selected }) {
   return (
     <Box
-      gap={8}
+
       display="flex"
       alignItems="center"
       justifyContent="space-between"
       flexDirection={{ xs: 'column', md: 'row' }}
       sx={(theme) => ({
-        py: 15,
+
         opacity: 0,
-        minHeight: 720,
+        minHeight: 420,
+
         transition: theme.transitions.create(['opacity'], {
           easing: theme.transitions.easing.easeIn,
           duration: theme.transitions.duration.complex,
@@ -137,7 +107,7 @@ export function CarouselItem({ product, selected }) {
     >
       <Box
         sx={{
-          maxWidth: 440,
+          maxWidth: 800,
           color: 'common.white',
           mx: { xs: 'auto', md: 'unset' },
           textAlign: { xs: 'center', md: 'unset' },
@@ -145,11 +115,13 @@ export function CarouselItem({ product, selected }) {
       >
 
 
-        <Typography component="h3" variant="h2" sx={{ mb: 2 }}>
-          Valcene votre signature d’élégance
+        <Typography component="h3" variant="h2" sx={{ mb: 2, color: 'black' }}>
+          Valcene votre signature
         </Typography>
 
-
+        <Typography component="h3" variant="h2" sx={{ mb: 2, color: 'black' }}>
+           d’élégance
+        </Typography>
 
         <Button
           component={RouterLink}
@@ -168,8 +140,7 @@ export function CarouselItem({ product, selected }) {
         alt={product.name}
         src={product.coverUrl}
         sx={(theme) => ({
-          width: 480,
-          filter: `drop-shadow(20px 20px 24px ${varAlpha(theme.vars.palette.common.blackChannel, 0.8)})`,
+          width: 500,
         })}
       />
     </Box>

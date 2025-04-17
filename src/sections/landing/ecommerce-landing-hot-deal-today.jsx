@@ -17,6 +17,10 @@ import { EcommerceProductItemHot } from '../product/item/ecommerce-product-item-
 // ----------------------------------------------------------------------
 
 export function EcommerceLandingHotDealToday({ products, sx, ...other }) {
+
+
+
+
   const carousel = useCarousel({
     slidesToShow: { xs: 2, sm: 3, md: 4, lg: 4 },
     slidesToScroll: 2,

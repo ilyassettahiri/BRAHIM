@@ -47,7 +47,7 @@ export function EcommerceProductItemFeaturedByBrand({ product, sx, ...other }) {
           {product.category}
         </Typography>
 
-        <ProductPrice price={product.price} priceSale={product.priceSale} />
+        <ProductPrice price={product.price.prixApres} priceSale={product.price.prixAvant} />
 
         <Box display="flex" flexGrow={1} alignItems="flex-end" justifyContent="flex-end">
           <Button

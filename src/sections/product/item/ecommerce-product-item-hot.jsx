@@ -50,7 +50,7 @@ export function EcommerceProductItemHot({ product, isHot = false, sx }) {
             {product.name}
           </Typography>
 
-          <ProductPrice price={product.price} sx={{ ...(isHot && { color: 'error.main' }) }} />
+          <ProductPrice price={product.price.prixApres} sx={{ ...(isHot && { color: 'error.main' }) }} />
         </Typography>
 
         {isHot && (
