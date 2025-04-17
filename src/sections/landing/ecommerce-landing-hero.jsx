@@ -125,7 +125,7 @@ export function CarouselItem({ product, selected }) {
 
         <Button
           component={RouterLink}
-          href={`/products/${product.id}/`}
+          href={`/products`}
           size="large"
           color="primary"
           variant="contained"

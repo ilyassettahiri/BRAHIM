@@ -14,7 +14,7 @@ export function ProductPrice({ price, priceSale = 0, sx, ...other }) {
       sx={{ typography: 'subtitle2', ...sx }}
       {...other}
     >
-      {fCurrency(price)}
+      {price} CFA
 
       {priceSale > 0 && (
         <Box
@@ -25,7 +25,7 @@ export function ProductPrice({ price, priceSale = 0, sx, ...other }) {
             fontWeight: 'fontWeightMedium',
           }}
         >
-          {fCurrency(priceSale)}
+          {priceSale} CFA
         </Box>
       )}
     </Box>

@@ -1,4 +1,4 @@
-const DEFAULT_LOCALE = { code: 'ar-AR', currency: 'CFA' };
+const DEFAULT_LOCALE = { code: 'en-EN', currency: 'CFA' };
 
 function processInput(inputValue) {
   if (inputValue == null || Number.isNaN(inputValue)) return null;

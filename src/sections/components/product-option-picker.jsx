@@ -24,35 +24,62 @@ export function ProductOptionPicker({
         return (
           <Box
             key={option.value}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
             onClick={() => onSelectColor(option.value)}
             sx={{
-              width: 32,
-              height: 32,
+              display: 'flex',
+              alignItems: 'center',
+              px: 2,
+              py: 1.5,
               borderRadius: 1,
               cursor: 'pointer',
-              bgcolor: option.label,
-              color: 'common.white',
+              border: (theme) =>
+                `1px solid ${
+                  selected
+                    ? theme.palette.primary.main
+                    : varAlpha(theme.vars.palette.grey['500Channel'], 0.24)
+                }`,
             }}
           >
-            <Iconify
-              icon="eva:checkmark-fill"
+            {/* color swatch */}
+            <Box
               sx={{
-                transform: selected ? 'scale(1)' : 'scale(0)',
-                transition: (theme) =>
-                  theme.transitions.create(['transform'], {
-                    easing: theme.transitions.easing.sharp,
-                    duration: theme.transitions.duration.shortest,
-                  }),
+                width: 20,
+                height: 20,
+                mr: 0.75,
+                borderRadius: 0.5,
+                bgcolor: option.label,
+                position: 'relative',
               }}
-            />
+            >
+              <Iconify
+                icon="eva:checkmark-fill"
+                sx={{
+                  position: 'absolute',
+                  inset: 0,
+                  m: 'auto',
+                  width: 14,
+                  height: 14,
+                  color: 'common.white',
+                  transform: selected ? 'scale(1)' : 'scale(0)',
+                  transition: (theme) =>
+                    theme.transitions.create(['transform'], {
+                      easing: theme.transitions.easing.sharp,
+                      duration: theme.transitions.duration.shortest,
+                    }),
+                }}
+              />
+            </Box>
+
+            {/* color name */}
+            <Typography variant="subtitle2" sx={{ textTransform: 'capitalize' }}>
+              {option.value}
+            </Typography>
           </Box>
         );
       })}
     </Box>
   );
+
 
   const renderMemoryOptions = (
     <Box gap={1.5} display="flex" flexWrap="wrap">
@@ -64,8 +91,8 @@ export function ProductOptionPicker({
             key={option.value}
             onClick={() => onSelectMemory(option.value)}
             sx={{
-              py: 0.75,
-              px: 1.5,
+              py: 1,
+              px: 2.5,
               borderRadius: 1,
               cursor: 'pointer',
               typography: 'subtitle2',

@@ -23,6 +23,8 @@ export function EcommerceProductViewGridItem({ product, sx, ...other }) {
 
   return (
     <Box
+
+
       sx={{
         minWidth: 0,
         position: 'relative',
@@ -62,6 +64,8 @@ export function EcommerceProductViewGridItem({ product, sx, ...other }) {
         <Image
           alt={product.name}
           src={product.coverUrl}
+          component={RouterLink}
+          href={`/products/${product.id}/`}
           ratio="1/1"
           sx={{
             flexShrink: 0,
@@ -91,7 +95,7 @@ export function EcommerceProductViewGridItem({ product, sx, ...other }) {
                 <ProductPrice price={product.price.prixApres} priceSale={product.price.prixAvant} />
 
 
-        <ProductRating value="5" label={`${product.sold} `} />
+
       </Box>
     </Box>
   );

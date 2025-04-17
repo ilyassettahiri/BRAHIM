@@ -16,6 +16,8 @@ import { varAlpha } from 'src/theme/styles';
 export function EcommerceProductItemCountDown({ product, sx, ...other }) {
   return (
     <Box
+      component={RouterLink}
+      href={`/products/${product.id}/`}
       sx={{
         p: 3,
         minWidth: 0,
@@ -35,6 +37,7 @@ export function EcommerceProductItemCountDown({ product, sx, ...other }) {
       <Box
         component="img"
         alt={product.name}
+
         src={product.coverUrl}
         sx={(theme) => ({
           aspectRatio: '1/1',
@@ -46,7 +49,7 @@ export function EcommerceProductItemCountDown({ product, sx, ...other }) {
       <Box display="flex" flexDirection="column" sx={{ my: 3, textAlign: 'center' }}>
         <Link
           component={RouterLink}
-          href={paths.eCommerce.product}
+          href={`/products/${product.id}/`}
           color="inherit"
           underline="none"
           variant="subtitle2"

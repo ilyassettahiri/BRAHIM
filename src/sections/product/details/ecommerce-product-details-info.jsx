@@ -37,7 +37,7 @@ const COLOR_OPTIONS = [
 
 
 const MEMORY_OPTIONS = [
-  { label: '39', value: '39' },
+
   { label: '40', value: '40' },
   { label: '41', value: '41' },
   { label: '42', value: '42' },
