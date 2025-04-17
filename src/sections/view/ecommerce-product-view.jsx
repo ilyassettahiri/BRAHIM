@@ -111,7 +111,7 @@ export function EcommerceProductView({ product }) {
         sx={{
           position: 'fixed',
           bottom: 24,
-          left:   24,
+          right:   24,
           zIndex: 1300,
         }}
       >

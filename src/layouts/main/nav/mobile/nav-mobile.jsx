@@ -54,20 +54,7 @@ export function NavMobile({ data, open, onClose, slots, sx }) {
         </Box>
       </Scrollbar>
 
-      {slots?.bottomArea ?? (
-        <Box gap={1.5} display="flex" sx={{ px: 2.5, py: 3 }}>
-          <Button
-            fullWidth
-            size="large"
-            variant="contained"
-            rel="noopener"
-            target="_blank"
-            href={paths.zoneStore}
-          >
-            Purchase
-          </Button>
-        </Box>
-      )}
+
     </Drawer>
   );
 }

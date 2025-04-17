@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Iconify } from 'src/components/iconify';
 import { ProductPrice } from '../../components/product-price';
+import { ButtonGroup } from '@mui/material';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -56,6 +57,11 @@ export function EcommerceProductDetailsInfo({ sx, name, price,id, priceSale, ...
   const [color, setColor] = useState('');
   const [memory, setMemory] = useState('');
   const router = useRouter();
+
+  const [quantity, setQuantity] = useState(1);
+
+  const handleDecrement = () => setQuantity((q) => Math.max(1, q - 1));
+  const handleIncrement = () => setQuantity((q) => q + 1);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -149,6 +155,39 @@ export function EcommerceProductDetailsInfo({ sx, name, price,id, priceSale, ...
       </Stack>
 
       <Stack spacing={2} sx={{ my: 5 }}>
+
+          <Box
+
+          sx={{
+            display: 'flex',
+
+            mb: 2,         // optional spacing below
+          }}
+          >
+            <ButtonGroup
+              size="large"
+              variant="outlined"
+              aria-label="quantity selector"
+              sx={{
+                // make all buttons' outlines white
+                '& .MuiButtonGroup-grouped': {
+                  borderColor: '#DDD',
+                  color: 'common.black',
+                },
+                // ensure the wrapper outline is also white
+                '& fieldset': {
+                  borderColor: '#DDD',
+                },
+              }}
+            >
+              <Button onClick={handleDecrement} >–</Button>
+              <Button disabled sx={{ minWidth: 48 }}>
+                {quantity}
+              </Button>
+              <Button onClick={handleIncrement}>+</Button>
+            </ButtonGroup>
+          </Box>
+
         <Button
           onClick={handleSubmit}
           size="large"
