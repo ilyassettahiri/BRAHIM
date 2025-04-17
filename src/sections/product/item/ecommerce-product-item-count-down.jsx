@@ -57,10 +57,10 @@ export function EcommerceProductItemCountDown({ product, sx, ...other }) {
           {product.name}
         </Link>
 
-        <Typography variant="h5">{`From ${fCurrency(product.price)}`}</Typography>
+        <Typography variant="h5">{`À partir de ${fCurrency(product.price)}`}</Typography>
       </Box>
 
-      <ProductCountdownBlock expired={new Date(fAdd({ days: 1, hours: 8 }))} />
+
     </Box>
   );
 }

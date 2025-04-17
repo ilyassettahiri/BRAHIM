@@ -39,7 +39,7 @@ export function EcommerceProductView({ product }) {
   }, [product]);
 
 
-  const whatsappNumber = '33123456789';          // no + or spaces
+  const whatsappNumber = '212629249926';          // no + or spaces
   const productUrl     = `https://valcene.com/products/${product.id}/`;
   const waText         = `Bonjour, je suis intéressé par l'achat de ${product.name} ${productUrl}`;
   const waLink         = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(waText)}`;
@@ -65,9 +65,9 @@ export function EcommerceProductView({ product }) {
             <EcommerceProductDetailsInfo
               name={product?.name || ''}
 
-              price={product?.price || 0}
+              price={product?.price.prixApres || 0}
               caption={product?.caption || ''}
-              priceSale={product?.priceSale || 0}
+              priceSale={product?.price.prixAvant || 0}
               id={product?.id || ''}
 
 

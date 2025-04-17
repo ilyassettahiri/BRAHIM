@@ -6,6 +6,7 @@ import LinearProgress from '@mui/material/LinearProgress';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
+import { useEffect } from 'react';
 
 import { Image } from 'src/components/image';
 
@@ -14,6 +15,10 @@ import { ProductPrice } from '../../components/product-price';
 // ----------------------------------------------------------------------
 
 export function EcommerceProductItemHot({ product, isHot = false, sx }) {
+
+  useEffect(() => {
+    console.log('EcommerceProductItemHot → product:', product);
+  }, [product]);
   return (
     <Link component={RouterLink} href={`/products/${product.id}/`} color="inherit" underline="none">
       <Paper
@@ -60,7 +65,7 @@ export function EcommerceProductItemHot({ product, isHot = false, sx }) {
             <Typography
               variant="caption"
               sx={{ flexShrink: 0, color: 'text.disabled' }}
-            >{`🔥 ${product.sold} sold`}</Typography>
+            >{`🔥 ${product.sold} vendu`}</Typography>
           </Box>
         )}
       </Paper>

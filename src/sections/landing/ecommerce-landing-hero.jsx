@@ -146,7 +146,7 @@ export function CarouselItem({ product, selected }) {
 
 
         <Typography component="h3" variant="h2" sx={{ mb: 2 }}>
-          AfriCuir votre signature d’élégance
+          Valcene votre signature d’élégance
         </Typography>
 
 

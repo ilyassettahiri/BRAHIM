@@ -45,9 +45,9 @@ export function EcommerceLandingHotDealToday({ products, sx, ...other }) {
           </Typography>
 
           <ProductCountdownBlock
-            hideDays
+            hidejours
             labelPlacement="inline"
-            expired={new Date(fAdd({ hours: 1, minutes: 30 }))}
+            expired={new Date(fAdd({ heures: 1, minutes: 30 }))}
             width={44}
             height={32}
             slotProps={{

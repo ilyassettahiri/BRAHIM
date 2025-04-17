@@ -4,9 +4,9 @@ import { _products } from 'src/_mock';
 import Container from '@mui/material/Container';
 
 import { EcommerceLandingHero } from '../landing/ecommerce-landing-hero';
-import { EcommerceLandingTopProducts } from '../landing/ecommerce-landing-top-products';
 import { EcommerceLandingHotDealToday } from '../landing/ecommerce-landing-hot-deal-today';
 import { EcommerceLandingFeaturedProducts } from '../landing/ecommerce-landing-featured-products';
+import { EcommerceLandingCategories } from '../landing/ecommerce-landing-categories';
 
 // ----------------------------------------------------------------------
 
@@ -32,11 +32,8 @@ export function EcommerceLandingView() {
 
 
 
+          <EcommerceLandingCategories />
 
-          <EcommerceLandingTopProducts
-            largeProducts={[_products[6], _products[4], _products[10]]}
-            smallProducts={_products.slice(4, 8)}
-          />
       </Container>
 
     </>

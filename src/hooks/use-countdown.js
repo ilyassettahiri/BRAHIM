@@ -8,10 +8,10 @@ function calculateTimeDifference(futureDate, currentDate) {
   const distance = futureDate.getTime() - currentDate.getTime();
 
   return {
-    days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-    hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    jours: Math.floor(distance / (1000 * 60 * 60 * 24)),
+    heures: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
     minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-    seconds: Math.floor((distance % (1000 * 60)) / 1000),
+    secondes: Math.floor((distance % (1000 * 60)) / 1000),
   };
 }
 
@@ -19,21 +19,21 @@ function calculateTimeDifference(futureDate, currentDate) {
 
 export function useCountdownDate(targetDate, placeholder = '- -') {
   const [value, setValue] = useState({
-    days: placeholder,
-    hours: placeholder,
+    jours: placeholder,
+    heures: placeholder,
     minutes: placeholder,
-    seconds: placeholder,
+    secondes: placeholder,
   });
 
   const handleUpdate = useCallback(() => {
     const now = new Date();
-    const { days, hours, minutes, seconds } = calculateTimeDifference(targetDate, now);
+    const { jours, heures, minutes, secondes } = calculateTimeDifference(targetDate, now);
 
     setValue({
-      days: formatTime(days),
-      hours: formatTime(hours),
+      jours: formatTime(jours),
+      heures: formatTime(heures),
       minutes: formatTime(minutes),
-      seconds: formatTime(seconds),
+      secondes: formatTime(secondes),
     });
   }, [targetDate]);
 
@@ -49,8 +49,8 @@ export function useCountdownDate(targetDate, placeholder = '- -') {
 
 // ----------------------------------------------------------------------
 
-export function useCountdownSeconds(initialSeconds) {
-  const [value, setValue] = useState(initialSeconds);
+export function useCountdownsecondes(initialsecondes) {
+  const [value, setValue] = useState(initialsecondes);
 
   const [isCounting, setIsCounting] = useState(false);
 
@@ -60,8 +60,8 @@ export function useCountdownSeconds(initialSeconds) {
 
   const handleReset = useCallback(() => {
     setIsCounting(false);
-    setValue(initialSeconds);
-  }, [initialSeconds]);
+    setValue(initialsecondes);
+  }, [initialsecondes]);
 
   useEffect(() => {
     let interval = null;
@@ -90,6 +90,6 @@ export function useCountdownSeconds(initialSeconds) {
 
 /**
  * Usage
- * const countdown = useCountdownSeconds(10);
- * const { value, start, reset, isCounting } = useCountdownSeconds(30);
+ * const countdown = useCountdownsecondes(10);
+ * const { value, start, reset, isCounting } = useCountdownsecondes(30);
  */

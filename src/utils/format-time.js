@@ -102,7 +102,7 @@ export function fTimestamp(date) {
 
 // ----------------------------------------------------------------------
 
-/** output: a few seconds, 2 years
+/** output: a few secondes, 2 years
  */
 
 // ----------------------------------------------------------------------
@@ -221,22 +221,22 @@ export function fDateRangeShortLabel(startDate, endDate, initial) {
 export function fAdd({
   years = 0,
   months = 0,
-  days = 0,
-  hours = 0,
+  jours = 0,
+  heures = 0,
   minutes = 0,
-  seconds = 0,
-  milliseconds = 0,
+  secondes = 0,
+  millisecondes = 0,
 }) {
   const result = dayjs()
     .add(
       dayjs.duration({
         years,
         months,
-        days,
-        hours,
+        jours,
+        heures,
         minutes,
-        seconds,
-        milliseconds,
+        secondes,
+        millisecondes,
       })
     )
     .format();
@@ -252,22 +252,22 @@ export function fAdd({
 export function fSub({
   years = 0,
   months = 0,
-  days = 0,
-  hours = 0,
+  jours = 0,
+  heures = 0,
   minutes = 0,
-  seconds = 0,
-  milliseconds = 0,
+  secondes = 0,
+  millisecondes = 0,
 }) {
   const result = dayjs()
     .subtract(
       dayjs.duration({
         years,
         months,
-        days,
-        hours,
+        jours,
+        heures,
         minutes,
-        seconds,
-        milliseconds,
+        secondes,
+        millisecondes,
       })
     )
     .format();

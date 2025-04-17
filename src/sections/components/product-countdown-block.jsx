@@ -5,7 +5,7 @@ import { useCountdownDate } from 'src/hooks/use-countdown';
 
 // ----------------------------------------------------------------------
 
-const timeUnits = ['days', 'hours', 'minutes', 'seconds'];
+const timeUnits = ['jours', 'heures', 'minutes', 'secondes'];
 
 // ----------------------------------------------------------------------
 
@@ -13,10 +13,10 @@ export function ProductCountdownBlock({
   sx,
   expired,
   slotProps,
-  hideDays,
-  hideHours,
-  hideMinutes,
-  hideSeconds,
+  hidejours,
+  hideheures,
+  hideminutes,
+  hidesecondes,
   width = 56,
   height = 44,
   labelPlacement = 'bottom',
@@ -26,14 +26,14 @@ export function ProductCountdownBlock({
 
   const shouldHideUnit = (unit) => {
     switch (unit) {
-      case 'days':
-        return hideDays;
-      case 'hours':
-        return hideHours;
+      case 'jours':
+        return hidejours;
+      case 'heures':
+        return hideheures;
       case 'minutes':
-        return hideMinutes;
-      case 'seconds':
-        return hideSeconds;
+        return hideminutes;
+      case 'secondes':
+        return hidesecondes;
       default:
         return false;
     }

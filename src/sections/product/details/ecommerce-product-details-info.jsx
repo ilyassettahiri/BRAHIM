@@ -5,12 +5,45 @@ import { useState } from 'react';
 
 import { useRouter } from 'next/navigation';
 import { Iconify } from 'src/components/iconify';
+import { ProductPrice } from '../../components/product-price';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import { ProductOptionPicker } from '../../components/product-option-picker';
+
+const COLOR_OPTIONS = [
+  { label: '#FA541C', value: 'red' },
+  { label: '#754FFE', value: 'violet' },
+  { label: '#00B8D9', value: 'cyan' },
+  { label: '#36B37E', value: 'green' },
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const MEMORY_OPTIONS = [
+  { label: '39', value: '39' },
+  { label: '40', value: '40' },
+  { label: '41', value: '41' },
+  { label: '42', value: '42' },
+  { label: '43', value: '43' },
+  { label: '44', value: '44' },
+  { label: '45', value: '45' },
+];
 
 
 export function EcommerceProductDetailsInfo({ sx, name, price,id, priceSale, ...other }) {
@@ -20,6 +53,8 @@ export function EcommerceProductDetailsInfo({ sx, name, price,id, priceSale, ...
     city: ''
   });
 
+  const [color, setColor] = useState('');
+  const [memory, setMemory] = useState('');
   const router = useRouter();
 
   const handleChange = (e) => {
@@ -58,6 +93,24 @@ export function EcommerceProductDetailsInfo({ sx, name, price,id, priceSale, ...
       </Stack>
 
       {/* Additional components like ProductPrice */}
+      <ProductPrice price={price} priceSale={priceSale} sx={{ typography: 'h5' }} />
+
+
+      <ProductOptionPicker
+        color={color}
+        memory={memory}
+        onSelectColor={(newValue) => setColor(newValue)}
+        onSelectMemory={(newValue) => setMemory(newValue)}
+        options={{
+          colors: COLOR_OPTIONS,
+          memory: MEMORY_OPTIONS,
+        }}
+        sx={{ my: 5 }}
+      />
+
+
+
+
 
       <Stack spacing={2} sx={{ my: 5 }}>
         <Typography variant="body">Informations client</Typography>
@@ -126,7 +179,7 @@ export function EcommerceProductDetailsInfo({ sx, name, price,id, priceSale, ...
               LIVRAISON GRATUITE
             </Typography>
             <Typography variant="caption">
-              Livraison gratuite sous 24&nbsp;h partout au&nbsp;Gabon
+              Livraison gratuite sous 24&nbsp;h
             </Typography>
           </Box>
 

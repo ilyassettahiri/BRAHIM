@@ -23,10 +23,10 @@ export function PrivacyView() {
 
   <h3>Politique de confidentialité</h3>
 <p>
-  Chez AfriCuir, nous accordons une importance primordiale à la confidentialité
+  Chez Valcene, nous accordons une importance primordiale à la confidentialité
   de nos clients. Cette politique de confidentialité détaille comment nous
   collectons, utilisons, divulguons et protégeons les informations personnelles
-  que vous nous fournissez via notre site&nbsp;web <strong>AfriCuir.ma</strong>.
+  que vous nous fournissez via notre site&nbsp;web <strong>Valcene.ma</strong>.
   En utilisant notre site, vous consentez aux pratiques décrites dans cette
   politique de confidentialité.
 </p>

@@ -31,7 +31,7 @@ export function EcommerceFilters({ open, onClose, options, filters }) {
 
 
 
-      <Block title="Price">
+      <Block title="Prix">
         <Box gap={2} display="flex" alignItems="center" sx={{ pt: 2 }}>
           <TextField
             size="small"
@@ -54,7 +54,7 @@ export function EcommerceFilters({ open, onClose, options, filters }) {
       </Block>
 
 
-      <Block title="Ratings">
+      <Block title="Reviews">
         <Box display="flex" flexDirection="column">
           {options.ratings.map((option, index) => (
             <Box

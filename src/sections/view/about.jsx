@@ -23,7 +23,7 @@ export function AboutView() {
   <h3>QUI SOMMES NOUS ?</h3>
   <p>
 
-   <strong>AfriCuir </strong>est la première plateforme en ligne africaine spécialisée dans la vente de chaussures en cuir. Elle est la référence en matière de chaussures élégantes et durables à des prix compétitifs, mettant un accent particulier sur les produits "Faits main" créés par des artisans locaux. Quelle que soit votre préférence en matière de style ou de design, AfriCuir s'engage à vous offrir un vaste choix d'articles tout en plaçant votre satisfaction au cœur de ses priorités.
+   <strong>Valcene </strong>est la première plateforme en ligne africaine spécialisée dans la vente de chaussures en cuir. Elle est la référence en matière de chaussures élégantes et durables à des prix compétitifs, mettant un accent particulier sur les produits "Faits main" créés par des artisans locaux. Quelle que soit votre préférence en matière de style ou de design, Valcene s'engage à vous offrir un vaste choix d'articles tout en plaçant votre satisfaction au cœur de ses priorités.
   </p>
 
   <h3>Nos Engagements</h3>

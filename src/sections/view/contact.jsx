@@ -34,11 +34,11 @@ export function ContactView() {
   </p>
 
   <h3>Téléphone</h3>
-  <p>+33 1 23 45 67 89</p>
+  <p>+212 629-249926</p>
 
   <h3>Email</h3>
   <p>
-    <a href="mailto:contact@africuir.com" style="color: #1976d2; text-decoration: none;">contact@africuir.com</a>
+    <a href="mailto:contact@valcene.com" style="color: #1976d2; text-decoration: none;">contact@valcene.com</a>
   </p>
 
   <h3>Horaires d'ouverture</h3>

@@ -26,6 +26,15 @@ const CATEGORIES = [
   'Femmes',
 ];
 
+const PRICES = [
+  { prixAvant: 65000, prixApres: 49900 }, // Chaussures Classiques
+  { prixAvant: 80000, prixApres: 59900 }, // Bottines
+  { prixAvant: 55000, prixApres: 42900 }, // Baskets et Espadrilles
+  { prixAvant: 60000, prixApres: 45900 }, // Mocassins
+  { prixAvant: 40000, prixApres: 29900 }, // Sandales
+  { prixAvant: 15000, prixApres: 12000 }, // Accessoires
+  { prixAvant: 70000, prixApres: 53900 }, // Femmes
+];
 
 
 const DESCRIPTION = [
@@ -108,21 +117,16 @@ export const _products = [...Array(24)].map((_, index) => ({
   name: NAMES[index],
   description: DESCRIPTION[index],
   category: CATEGORIES[index],
-  price: _mock.number.price(index),
+  price: PRICES[index],
+
+
   sold: Math.round(100 / (index + 1)),
 
   coverUrl: _mock.image.product(index),
   ratingNumber: _mock.number.rating(index),
 
   label: ['sale', 'new', 'sale', 'sale'][index] || '',
-  priceSale:
-    [
-      _mock.number.price(1),
-      _mock.number.price(2),
-      _mock.number.price(3),
-      _mock.number.price(4),
-      _mock.number.price(5),
-    ][index] || 0,
+
   images: [
     _mock.image.product(1),
     _mock.image.product(2),
