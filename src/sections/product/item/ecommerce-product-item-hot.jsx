@@ -19,7 +19,7 @@ export function EcommerceProductItemHot({ product, isHot = false, sx }) {
       <Paper
         variant="outlined"
         sx={{
-          p: 2,
+
           borderRadius: 2,
           bgcolor: 'transparent',
           transition: (theme) =>
@@ -37,19 +37,19 @@ export function EcommerceProductItemHot({ product, isHot = false, sx }) {
           alt={product.name}
           src={product.coverUrl}
           ratio="1/1"
-          sx={{ mb: 2, borderRadius: 1.5, bgcolor: 'background.neutral' }}
+          sx={{ mb: 1, borderRadius: 1.5, bgcolor: 'background.neutral' }}
         />
 
-        <div>
+        <Typography sx={{ p: 1}}>
           <Typography variant="body2" noWrap sx={{ mb: 0.5, fontWeight: 'fontWeightMedium' }}>
             {product.name}
           </Typography>
 
           <ProductPrice price={product.price} sx={{ ...(isHot && { color: 'error.main' }) }} />
-        </div>
+        </Typography>
 
         {isHot && (
-          <Box gap={1} display="flex" alignItems="center" sx={{ mt: 1 }}>
+          <Box gap={1} display="flex" alignItems="center" sx={{ mt: 1, p:1 }}>
             <LinearProgress
               color="inherit"
               variant="determinate"

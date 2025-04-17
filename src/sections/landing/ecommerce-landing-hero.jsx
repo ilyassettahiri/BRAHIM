@@ -146,12 +146,10 @@ export function CarouselItem({ product, selected }) {
 
 
         <Typography component="h3" variant="h2" sx={{ mb: 2 }}>
-          Best Selling Product
+          AfriCuir votre signature d’élégance
         </Typography>
 
-        <Typography variant="body2" sx={{ ...maxLine({ line: 2 }), mb: 5, opacity: 0.72 }}>
-        Best Selling Product
-        </Typography>
+
 
         <Button
           component={RouterLink}
@@ -161,7 +159,7 @@ export function CarouselItem({ product, selected }) {
           variant="contained"
           endIcon={<Iconify width={16} icon="solar:alt-arrow-right-outline" sx={{ ml: -0.5 }} />}
         >
-          Shop now
+          Découvrir
         </Button>
       </Box>
 

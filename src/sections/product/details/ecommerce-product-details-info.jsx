@@ -4,6 +4,7 @@
 import { useState } from 'react';
 
 import { useRouter } from 'next/navigation';
+import { Iconify } from 'src/components/iconify';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -11,7 +12,8 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
-export function EcommerceProductDetailsInfo({ sx, name, price, priceSale, ...other }) {
+
+export function EcommerceProductDetailsInfo({ sx, name, price,id, priceSale, ...other }) {
   const [formData, setFormData] = useState({
     fullName: '',
     phone: '',
@@ -47,6 +49,7 @@ export function EcommerceProductDetailsInfo({ sx, name, price, priceSale, ...oth
       console.error('Fetch error:', error);
     }
   };
+
 
   return (
     <Box sx={sx} {...other}>
@@ -100,8 +103,58 @@ export function EcommerceProductDetailsInfo({ sx, name, price, priceSale, ...oth
           variant="contained"
           sx={{ typography: 'h5', py: 3.5, width: { xs: 1, sm: 'auto' } }}
         >
-          commander maintenant
+          Commander maintenant
         </Button>
+
+
+        {/* --- service bullets --- */}
+        <Box
+          display="grid"
+          gridTemplateColumns={{ xs: '1fr', sm: '1fr 1fr' }}
+          gap={2}
+          mt={2}
+        >
+          <Box
+            sx={{
+              bgcolor: 'background.neutral',
+              p: 2,
+              borderRadius: 1,
+              textAlign: 'center',
+            }}
+          >
+            <Typography variant="subtitle2" fontWeight="bold">
+              LIVRAISON GRATUITE
+            </Typography>
+            <Typography variant="caption">
+              Livraison gratuite sous 24&nbsp;h partout au&nbsp;Gabon
+            </Typography>
+          </Box>
+
+          <Box
+            sx={{
+              bgcolor: 'background.neutral',
+              p: 2,
+              borderRadius: 1,
+              textAlign: 'center',
+            }}
+          >
+            <Typography variant="subtitle2" fontWeight="bold">
+              RETOUR&nbsp;ET&nbsp;ÉCHANGES
+            </Typography>
+            <Typography variant="caption">
+              Retour et échanges gratuits sous 7&nbsp;jours
+            </Typography>
+          </Box>
+        </Box>
+
+        {/* --- sizing note --- */}
+        <Typography
+          variant="caption"
+          sx={{ mt: 1, display: 'block', textAlign: 'center', color: 'text.secondary' }}
+        >
+          TAILLE HABITUELLE&nbsp;: prenez votre taille habituelle, cela convient à&nbsp;95&nbsp;% de nos&nbsp;clients.
+        </Typography>
+
       </Stack>
     </Box>
   );

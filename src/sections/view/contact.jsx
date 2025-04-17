@@ -38,7 +38,7 @@ export function ContactView() {
 
   <h3>Email</h3>
   <p>
-    <a href="mailto:support@valcene.com" style="color: #1976d2; text-decoration: none;">support@valcene.com</a>
+    <a href="mailto:contact@africuir.com" style="color: #1976d2; text-decoration: none;">contact@africuir.com</a>
   </p>
 
   <h3>Horaires d'ouverture</h3>
@@ -51,7 +51,6 @@ export function ContactView() {
     </li>
   </ul>
 
-  <hr style="margin: 2rem 0; border: none; border-top: 1px solid #ccc;" />
 
   <p style="text-align: center;">
     Nous nous engageons à vous répondre dans les plus brefs délais.

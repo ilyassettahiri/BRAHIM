@@ -26,7 +26,8 @@ export function EcommerceLandingFeaturedProducts({ sx, largeProducts, smallProdu
             textAlign: { xs: 'center', md: 'unset' },
           }}
         >
-          Featured products
+          Nos Bestsellers
+
         </Typography>
 
         <Grid container spacing={3} disableEqualOverflow>

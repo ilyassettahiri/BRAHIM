@@ -58,8 +58,8 @@ export function HomeFooter({ sx, ...other }) {
               Contactez-nous
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
-              <Link href="mailto:support@valcene.com" color="inherit" variant="body2">
-                support@valcene.com
+              <Link href="mailto:contact@africuir.com" color="inherit" variant="body2">
+                contact@africuir.com
               </Link>
               <Link href="tel:+33123456789" color="inherit" variant="body2">
                 +33 1 23 45 67 89

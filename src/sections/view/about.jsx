@@ -20,10 +20,10 @@ export function AboutView() {
 
   const description = `
   <div class="about-valcene" style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-  <h3>À propos de Valcene</h3>
+  <h3>QUI SOMMES NOUS ?</h3>
   <p>
-    <strong>Valcene</strong> est une marque française de vêtements en cuir d’exception, alliant élégance, authenticité et savoir-faire artisanal.
-    Nos créations sont conçues pour ceux qui recherchent des pièces uniques et intemporelles, réalisées avec une passion pour la qualité et le détail.
+
+   <strong>AfriCuir </strong>est la première plateforme en ligne africaine spécialisée dans la vente de chaussures en cuir. Elle est la référence en matière de chaussures élégantes et durables à des prix compétitifs, mettant un accent particulier sur les produits "Faits main" créés par des artisans locaux. Quelle que soit votre préférence en matière de style ou de design, AfriCuir s'engage à vous offrir un vaste choix d'articles tout en plaçant votre satisfaction au cœur de ses priorités.
   </p>
 
   <h3>Nos Engagements</h3>
@@ -55,11 +55,7 @@ export function AboutView() {
     Rejoignez-nous pour vivre l’expérience Valcene – la quintessence du chic en cuir à la française.
   </p>
 
-  <hr />
 
-  <p>
-    <strong>Valcene</strong> – L’art du cuir, réinventé.
-  </p>
 </div>
 
     `;

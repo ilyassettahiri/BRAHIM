@@ -24,7 +24,8 @@ export function EcommerceLandingTopProducts({ largeProducts, smallProducts, sx, 
             textAlign: { xs: 'center', md: 'unset' },
           }}
         >
-          Top products
+          Nouvelle Collection
+
         </Typography>
 
         <Box

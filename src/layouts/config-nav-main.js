@@ -31,9 +31,16 @@ export const pageLinks = [
 // ----------------------------------------------------------------------
 
 export const navData = [
-  { title: 'Accueil', path: '/' },
 
-  { title: 'Collection', path: '/products' },
+
+  { title: 'Chaussures Classiques', path: '/chaussures' },
+  { title: 'Bottines', path: '/bottines' },
+  { title: 'Baskets et Espadrilles', path: '/baskets' },
+  { title: 'Mocassins', path: '/mocassins' },
+  { title: 'Sandales', path: '/sandales' },
+  { title: 'Accessoires', path: '/accessoires' },
+  { title: 'Femmes', path: '/femmes' },
+
 ];
 
 

@@ -18,7 +18,7 @@ import { EcommerceProductItemHot } from '../product/item/ecommerce-product-item-
 
 export function EcommerceLandingHotDealToday({ products, sx, ...other }) {
   const carousel = useCarousel({
-    slidesToShow: { xs: 2, sm: 3, md: 4, lg: 6 },
+    slidesToShow: { xs: 2, sm: 3, md: 4, lg: 4 },
     slidesToScroll: 2,
     slideSpacing: '24px',
   });
@@ -41,7 +41,7 @@ export function EcommerceLandingHotDealToday({ products, sx, ...other }) {
           sx={{ mb: { xs: 5, md: 8 } }}
         >
           <Typography variant="h3" sx={{ textAlign: { xs: 'center', md: 'unset' } }}>
-            🔥 Hot deal today
+            🔥 Offre du jour
           </Typography>
 
           <ProductCountdownBlock
