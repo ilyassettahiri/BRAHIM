@@ -115,11 +115,11 @@ export function CarouselItem({ product, selected }) {
       >
 
 
-        <Typography component="h3" variant="h2" sx={{ mb: 2, color: 'black' }}>
+        <Typography component="h3" variant="h1" sx={{ mb: 2, color: 'black' }}>
           Valcene votre signature
         </Typography>
 
-        <Typography component="h3" variant="h2" sx={{ mb: 2, color: 'black' }}>
+        <Typography component="h3" variant="h1" sx={{ mb: 2, color: 'black' }}>
            d’élégance
         </Typography>
 

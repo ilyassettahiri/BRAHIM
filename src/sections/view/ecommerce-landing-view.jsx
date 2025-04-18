@@ -25,7 +25,7 @@ export function EcommerceLandingView() {
           <EcommerceLandingHotDealToday products={_products} />
 
           <EcommerceLandingFeaturedProducts
-            largeProducts={_products.slice(1, 3)}
+            largeProducts={_products.slice(4, 8)}
             smallProducts={_products.slice(4, 8)}
           />
 

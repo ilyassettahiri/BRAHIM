@@ -114,14 +114,16 @@ export function ProductOptionPicker({
     <Box gap={3} display="flex" flexDirection="column" sx={sx} {...other}>
       <div>
         <Typography variant="subtitle2" sx={{ mb: 1.5 }}>
-        Couleur
+        Choisir la couleur
+
         </Typography>
         {renderColorOptions}
       </div>
 
       <div>
         <Typography variant="subtitle2" sx={{ mb: 1.5 }}>
-        Taille
+        Choisir la pointure
+
         </Typography>
         {renderMemoryOptions}
       </div>

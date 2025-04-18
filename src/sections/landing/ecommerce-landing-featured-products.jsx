@@ -31,11 +31,11 @@ export function EcommerceLandingFeaturedProducts({ sx, largeProducts, smallProdu
         </Typography>
 
         <Grid container spacing={3} disableEqualOverflow>
-          <Grid xs={12} lg={8}>
+          <Grid xs={12} lg={12}>
             <Box
               gap={3}
               display="grid"
-              gridTemplateColumns={{ xs: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
+              gridTemplateColumns={{ xs: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }}
             >
               {largeProducts?.map((product, index) => (
                 <EcommerceProductItemCountDown
@@ -53,21 +53,7 @@ export function EcommerceLandingFeaturedProducts({ sx, largeProducts, smallProdu
             </Box>
           </Grid>
 
-          <Grid xs={12} lg={4}>
-            <Box
-              gap={3}
-              display="grid"
-              gridTemplateColumns={{
-                xs: 'repeat(2, 1fr)',
-                md: 'repeat(4, 1fr)',
-                lg: 'repeat(2, 1fr)',
-              }}
-            >
-              {smallProducts?.map((product) => (
-                <EcommerceProductItemHot key={product.id} product={product} />
-              ))}
-            </Box>
-          </Grid>
+
         </Grid>
       </>
     </Box>
