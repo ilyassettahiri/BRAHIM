@@ -43,8 +43,8 @@ export function ProductOptionPicker({
             {/* color swatch */}
             <Box
               sx={{
-                width: 20,
-                height: 20,
+                width: 30,
+                height: 30,
                 mr: 0.75,
                 borderRadius: 0.5,
                 bgcolor: option.label,
@@ -57,8 +57,8 @@ export function ProductOptionPicker({
                   position: 'absolute',
                   inset: 0,
                   m: 'auto',
-                  width: 14,
-                  height: 14,
+                  width: 20,
+                  height: 20,
                   color: 'common.white',
                   transform: selected ? 'scale(1)' : 'scale(0)',
                   transition: (theme) =>
@@ -91,7 +91,7 @@ export function ProductOptionPicker({
             key={option.value}
             onClick={() => onSelectSize(option.value)}
             sx={{
-              py: 1,
+              py: 2,
               px: 2.5,
               borderRadius: 1,
               cursor: 'pointer',
@@ -111,9 +111,9 @@ export function ProductOptionPicker({
   );
 
   return (
-    <Box gap={3} display="flex" flexDirection="column" sx={sx} {...other}>
+    <Box gap={6} display="flex" flexDirection="column" sx={sx} {...other}>
       <div>
-        <Typography variant="subtitle2" sx={{ mb: 1.5 }}>
+        <Typography variant="subtitle1" sx={{ mb: 2.5 }}>
         Choisir la couleur
 
         </Typography>
@@ -121,7 +121,7 @@ export function ProductOptionPicker({
       </div>
 
       <div>
-        <Typography variant="subtitle2" sx={{ mb: 1.5 }}>
+        <Typography variant="subtitle1" sx={{ mb: 2.5 }}>
         Choisir la pointure
 
         </Typography>

@@ -156,7 +156,7 @@ export function EcommerceProductDetailsInfo({ sx, product, ...other }) {
  return (
    <Box sx={sx} {...other}>
      {/* Product Info */}
-     <Stack spacing={1} sx={{ mb: 2 }}>
+     <Stack spacing={1} sx={{ mb: 4 }}>
        <Typography variant="h3">{product.name}</Typography>
        <ProductRating value={product.rating || "5"} label={product.reviews || "34"} />
      </Stack>
@@ -166,7 +166,7 @@ export function EcommerceProductDetailsInfo({ sx, product, ...other }) {
        <ProductPrice
          price={product.price.prixApres}
          priceSale={product.price.prixAvant}
-         sx={{ typography: 'h5' }}
+         sx={{ typography: 'h4' }}
        />
      )}
 
@@ -184,8 +184,8 @@ export function EcommerceProductDetailsInfo({ sx, product, ...other }) {
      />
 
      {/* Order Form */}
-     <Stack spacing={2} sx={{ my: 5 }}>
-       <Typography variant="body1">Pour passer votre commande, veuillez remplir ce formulaire :</Typography>
+     <Stack spacing={3} sx={{ my: 5 }}>
+       <Typography variant="body">Pour passer votre commande, veuillez remplir ce formulaire :</Typography>
        {/* Display General Error Message */}
        {errors.general && (
            <Typography color="error" variant="body2" sx={{ mb: 1 }}>
@@ -211,6 +211,27 @@ export function EcommerceProductDetailsInfo({ sx, product, ...other }) {
            onChange={handleChange}
            error={errors.fullName} // Show error state
            helperText={errors.fullName ? "Le nom et prénom sont requis." : ""} // Error message
+
+          sx={{
+            // Target the border (fieldset element)
+            '& .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#8b8b8c',
+              borderWidth: '1px', // Make it bolder
+            },
+            // Target the input area for padding
+            '& .MuiOutlinedInput-input': {
+              py: 2.3, // Increase vertical padding (adjust value as needed, 2 = 16px default theme spacing, 3 = 24px, etc.)
+            },
+
+             // Optional: Style the border when focused or on error for consistency
+            '& .Mui-focused .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#333', // Keep it dark when focused
+            },
+             '& .Mui-error .MuiOutlinedInput-notchedOutline': {
+              borderColor: 'red', // Or '#333' if you don't want default error color border
+            },
+          }}
+
          />
          <TextField
            fullWidth
@@ -223,27 +244,87 @@ export function EcommerceProductDetailsInfo({ sx, product, ...other }) {
            type="tel"
            error={errors.phone} // Show error state
            helperText={errors.phone ? "Le numéro de téléphone est requis." : ""} // Error message
+
+           sx={{
+            // Target the border (fieldset element)
+            '& .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#8b8b8c',
+              borderWidth: '1px', // Make it bolder
+            },
+            // Target the input area for padding
+            '& .MuiOutlinedInput-input': {
+              py: 2.3, // Increase vertical padding (adjust value as needed, 2 = 16px default theme spacing, 3 = 24px, etc.)
+            },
+
+             // Optional: Style the border when focused or on error for consistency
+            '& .Mui-focused .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#333', // Keep it dark when focused
+            },
+             '& .Mui-error .MuiOutlinedInput-notchedOutline': {
+              borderColor: 'red', // Or '#333' if you don't want default error color border
+            },
+          }}
+
          />
          <TextField
            fullWidth
-           required // Still mark as required visually, though no specific validation added here yet
            name="city"
            label="Ville"
            variant="outlined"
            value={formData.city}
            onChange={handleChange}
-           sx={{ gridColumn: { md: '1 / span 2' } }}
+
+
+           sx={{
+
+            gridColumn: { md: '1 / span 2' },
+            // Target the border (fieldset element)
+            '& .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#8b8b8c',
+              borderWidth: '1px', // Make it bolder
+            },
+            // Target the input area for padding
+            '& .MuiOutlinedInput-input': {
+              py: 2.3, // Increase vertical padding (adjust value as needed, 2 = 16px default theme spacing, 3 = 24px, etc.)
+            },
+
+             // Optional: Style the border when focused or on error for consistency
+            '& .Mui-focused .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#333', // Keep it dark when focused
+            },
+             '& .Mui-error .MuiOutlinedInput-notchedOutline': {
+              borderColor: 'red', // Or '#333' if you don't want default error color border
+            },
+          }}
+
            // Add error/helperText for city if needed later
          />
        </Box>
      </Stack>
 
      {/* Quantity & Submit */}
-     <Stack spacing={3} sx={{ my: 5 }}>
+     <Stack spacing={2} sx={{ my: 5 }}>
          {/* Quantity */}
          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }} >
-           <Typography variant="subtitle2">Quantité :</Typography>
-           <ButtonGroup size="large" variant="outlined" /* ... sx props ... */ >
+           <Typography variant="subtitle1">Quantité :</Typography>
+           <ButtonGroup size="large" variant="outlined"
+
+
+           sx={{
+            '& .MuiButtonGroup-grouped': {
+                borderColor: '#DDD',
+              },
+              // make every label black, including the disabled one
+              '& .MuiButton-root': {
+                color: 'common.black',
+              },
+              '& .MuiButton-root.Mui-disabled': {
+                color: 'common.black',
+              },
+
+          }}
+
+           >
              <Button onClick={handleDecrement} disabled={isSubmitting}>–</Button>
              <Button disabled sx={{ minWidth: '48px !important', px: '12px !important' }}>{quantity}</Button>
              <Button onClick={handleIncrement} disabled={isSubmitting}>+</Button>
@@ -259,7 +340,7 @@ export function EcommerceProductDetailsInfo({ sx, product, ...other }) {
            variant="contained"
            startIcon={isSubmitting ? <CircularProgress size={20} color="inherit" /> : null} // Show loading spinner
            sx={{ /* ... sx props ... */
-              typography: 'h5', py: 2, px: 4, width: { xs: '100%', sm: 'auto' }, alignSelf: { xs: 'stretch', sm: 'flex-stretch'}
+              typography: 'h5',mt:3, py: 3.5, px: 4, width: { xs: '100%', sm: 'auto' }, alignSelf: { xs: 'stretch', sm: 'flex-stretch'}
            }}
          >
            {isSubmitting ? 'Envoi en cours...' : 'Commander maintenant'}

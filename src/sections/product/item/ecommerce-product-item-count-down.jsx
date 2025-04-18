@@ -58,7 +58,7 @@ export function EcommerceProductItemCountDown({ product, sx, ...other }) {
           {product.name}
         </Link>
 
-        <Typography variant="body">{`À partir de ${fCurrency(product.price.prixApres)}`}</Typography>
+        <Typography variant="body">{`À partir de ${product.price.prixApres} CFA`}</Typography>
       </Box>
 
 
