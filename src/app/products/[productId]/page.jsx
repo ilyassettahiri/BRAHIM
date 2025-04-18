@@ -5,7 +5,7 @@ import { EcommerceProductView } from 'src/sections/view/ecommerce-product-view';
 
 // ----------------------------------------------------------------------
 
-export const metadata = { title: `Product details` };
+export const metadata = { title: `Valcene` };
 
 export default function Page({ params }) {
 
