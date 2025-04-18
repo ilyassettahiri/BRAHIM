@@ -4,8 +4,8 @@ import { CONFIG } from 'src/config-global';
 
 const PRODUCTS_META = [
   {
-    name: '🧼 Égouttoir à Vaisselle Multifonction Haute Efficacité',
-    category: 'Accessoires',
+    name: 'K303 Chaussure en cuir',
+    category: 'Chaussures Classiques',
   },
   { name: 'title 2', category: 'Chaussures Classiques' },
   { name: 'title 3', category: 'Bottines' },
@@ -31,7 +31,7 @@ const CATEGORIES = [
 
 
 const PRICES = [
-  { prixAvant: 65000, prixApres: 49900 },
+  { prixAvant: 40000, prixApres: 28900 },
   { prixAvant: 80000, prixApres: 59900 },
   { prixAvant: 55000, prixApres: 42900 },
   { prixAvant: 60000, prixApres: 45900 },
@@ -48,6 +48,7 @@ const PRODUCT_GALLERIES = [
     `${CONFIG.assetsDir}/assets/products/p1/1.webp`,
     `${CONFIG.assetsDir}/assets/products/p1/2.webp`,
     `${CONFIG.assetsDir}/assets/products/p1/3.webp`,
+    `${CONFIG.assetsDir}/assets/products/p1/4.webp`,
   ],
 
   // title 2
@@ -110,8 +111,9 @@ const PRODUCT_GALLERIES = [
 const DESCRIPTION = [
   `
 
-   <h5>Libérez de l’espace, organisez votre cuisine et séchez votre vaisselle en un clin d’œil</h3><p><img src="https://cdn.youcan.shop/stores/6f9d0740b3150deb70dadc525e99d7e7/others/CtlR8jGGsPYubjhKKNm8NCisgUTwdW8Onrk0NiQR.webp" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/6f9d0740b3150deb70dadc525e99d7e7/others/CtlR8jGGsPYubjhKKNm8NCisgUTwdW8Onrk0NiQR.webp">
-   <p></p> Sa structure en fer robuste et sa multifonctionnalité en font l'accessoire <strong>incontournable&nbsp;</strong>pour une cuisine ordonnée et moderne.</p><h5>✨ L’élégance et l’efficacité réunies dans votre cuisine</h3><p><img src="https://cdn.youcan.shop/stores/6f9d0740b3150deb70dadc525e99d7e7/others/lOvBQ6vU37jv7OM0gMqCtupuPxdkmB55dKeqN04i.webp" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/6f9d0740b3150deb70dadc525e99d7e7/others/lOvBQ6vU37jv7OM0gMqCtupuPxdkmB55dKeqN04i.webp"></p><p>Que ce soit pour la vaisselle, les ustensiles ou même des objets de salle de bain ou de bureau, cet étendoir compact mais spacieux transforme votre quotidien. Il allie <strong>design épuré, solidité et gain de place,</strong> tout en gardant vos espaces propres et bien organisés.</p><h5>✅ Caractéristiques du produit :</h3><p><img src="https://cdn.youcan.shop/stores/6f9d0740b3150deb70dadc525e99d7e7/others/4MUyLdhEzz1GtiJFHvbZ5JDElftWKutz7YVxQXXf.webp" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/6f9d0740b3150deb70dadc525e99d7e7/others/4MUyLdhEzz1GtiJFHvbZ5JDElftWKutz7YVxQXXf.webp"></p><p><strong>✓ Matériau :</strong> Fer enduit antirouille, ultra-résistant<br><strong>✓ Multifonction :</strong> cuisine, salle de bain, bureau, etc.<br>✓ Design vertical compact pour gagner de l’espace<br>✓ Égouttage rapide avec plateau récupérateur<br>✓ Séparation intelligente pour assiettes, couverts, tasses<br>✓ Facile à nettoyer et à assembler</p><h5>Ce que vous obtenez</h3><p><img src="https://cdn.youcan.shop/stores/6f9d0740b3150deb70dadc525e99d7e7/others/5MSnYFRMLbZ4OwHuX0A2iV5evgNWfFWm1gwugrTP.gif" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/6f9d0740b3150deb70dadc525e99d7e7/others/5MSnYFRMLbZ4OwHuX0A2iV5evgNWfFWm1gwugrTP.gif"></p><h5>🔒 Garantie 100% Satisfait ou Remboursé</h3><p>Achetez en toute tranquillité : profitez de notre <strong>garantie satisfait ou remboursé pendant 14 jours. Notre équipe est disponible 7j/7</strong> pour toute assistance ou demande d'information.</p><h5>⚠️ Attention : Quantités limitées en stock !</h3><p>Ce produit connaît une <strong>demande très élevée.</strong> Nous recevons des commandes tous les jours et le <strong>stock est presque épuisé. Ne tardez pas !</strong></p><h5>⏳ Commandez aujourd’hui et économisez 20% !</h3><p>Ne ratez pas cette offre exclusive valable jusqu’à minuit seulement :<br>Profitez de -20% dès maintenant !</p>
+
+  <h3 style="text-align: left;">K303 Chaussure en cuir : Support et Soulagement Quotidien</h3><p><br></p><ul style="list-style-type: disc;"><li><strong>Confort Supérieur :</strong> S'adapte parfaitement à la forme de vos pieds.</li><li><strong>Support Optimal :</strong> Semelle intérieure ergonomique et rembourrée.</li><li><strong>Soulagement des Douleurs :</strong> Atténue les douleurs grâce à un soutien adéquat.</li><li><strong>Style Élégant :</strong> Design classique et intemporel.</li><li><strong>Durabilité :</strong> Cuir de haute qualité, robuste et résistant.</li></ul><p><br></p><h3>Spécifications des chaussures :</h3><p><br></p><p><img src="https://cdn.youcan.shop/stores/2c8ca74e8aab2e9911be1c822fb59926/others/TSPyCoV2dZCXRtLVegLSMVSxgVwjQBpV7Mt1ctKn.jpg" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/2c8ca74e8aab2e9911be1c822fb59926/others/TSPyCoV2dZCXRtLVegLSMVSxgVwjQBpV7Mt1ctKn.jpg"></p><p><img src="https://cdn.youcan.shop/stores/2c8ca74e8aab2e9911be1c822fb59926/others/ycNdEI68M9DIzJ0WHIli39LY967n2q2aFXP6zpRK.jpg" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/2c8ca74e8aab2e9911be1c822fb59926/others/ycNdEI68M9DIzJ0WHIli39LY967n2q2aFXP6zpRK.jpg"></p><h3><img src="https://cdn.youcan.shop/stores/2c8ca74e8aab2e9911be1c822fb59926/others/2XGJgJ7WbWUrXVxuZQE5VZLjlMXb3LG1go42sMhl.jpg" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/2c8ca74e8aab2e9911be1c822fb59926/others/2XGJgJ7WbWUrXVxuZQE5VZLjlMXb3LG1go42sMhl.jpg"></h3><ul style="list-style-type: disc;"><li><strong>Tige / Dessus :</strong> 100% cuir.&nbsp;</li><li><strong>Semelle intérieure</strong> en Cuir confortable. &nbsp; &nbsp;</li><li><strong>Semelle extérieure:&nbsp;</strong>antidérapante Extra-light, confortable. &nbsp;</li></ul><p><br></p><h3>Utilisation :</h3><p><br></p><ul style="list-style-type: disc;"><li><strong>Quotidienne :</strong> Travail, sorties décontractées, longues promenades.</li><li><strong>Voyages :</strong> Confort et praticité idéaux pour les voyages.</li><li><strong>Occasions Spéciales :</strong> Convient pour des événements formels.</li></ul><p><br></p><h3><span style="color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-kerning: none;">Testez-nous sans risque</span></h3><h3><br><img src="https://cdn.youcan.shop/stores/2c8ca74e8aab2e9911be1c822fb59926/others/NGJGhnxxQpjnWJW2IxaxkY8ut2MMGeb8nRaQa4AX.webp" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/2c8ca74e8aab2e9911be1c822fb59926/others/NGJGhnxxQpjnWJW2IxaxkY8ut2MMGeb8nRaQa4AX.webp"></h3><ul style="list-style-type: disc;"><li>Livraison <strong>gratuite&nbsp;</strong>sous 48H</li><li>Paiement en espèces à la livraison</li><li>Essayer avant de payer</li><li>Prenez votre taille habituelle, ca marche pour 95% de nos clients.</li></ul><h3><br><p><br></p></h3>
+
 
   `,
 

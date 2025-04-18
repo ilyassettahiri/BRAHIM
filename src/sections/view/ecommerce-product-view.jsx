@@ -79,7 +79,7 @@ export function EcommerceProductView({ product }) {
 
         <Divider sx={{my: 3 }} />
 
-        <Grid container columnSpacing={{ md: 12 }} sx={{ textAlign: { xs: 'center', md: 'center' } }}>
+        <Grid container columnSpacing={{ md: 12 }} >
           <Grid xs={12} md={12} lg={12}>
             <Markdown
               content={product?.description || ''}

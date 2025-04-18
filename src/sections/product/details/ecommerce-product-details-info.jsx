@@ -121,7 +121,7 @@ export function EcommerceProductDetailsInfo({ sx, name, price,id, priceSale, ...
 
 
       <Stack spacing={2} sx={{ my: 5 }}>
-        <Typography variant="body">Informations client</Typography>
+        <Typography variant="body">Pour passer votre commande, veuillez remplir ce formulaire        </Typography>
         <Box
           display="grid"
           gridTemplateColumns={{ xs: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
