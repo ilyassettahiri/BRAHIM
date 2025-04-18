@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
 import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
+import { RouterLink } from 'src/routes/components';
+import Link from '@mui/material/Link';
 
 import { paths } from 'src/routes/paths';
 import { usePathname } from 'src/routes/hooks';
@@ -11,7 +13,7 @@ import { usePathname } from 'src/routes/hooks';
 import { useBoolean } from 'src/hooks/use-boolean';
 
 
-import { Logo } from 'src/components/logo';
+
 
 import { Main } from './main';
 
@@ -68,8 +70,28 @@ export function MainLayout({ sx, children, header }) {
                   open={openMobileNav.value}
                   onClose={openMobileNav.onFalse}
                 />
-                {/* -- Logo -- */}
-                <Logo />
+
+
+                <Link
+                  component={RouterLink}
+                   href='/'
+                  underline="none"
+                  sx={{
+                    display: { xs: 'block', md: 'block' },
+                  }}
+                >
+
+                      <Box
+                        component="img"
+                        src="/assets/background/logo.jpeg"
+                        alt="Logo"
+                        sx={{
+                          height: 60,
+                          width: 'auto',
+                          display: { xs: 'block', md: 'block' },
+                        }}
+                      />
+                </Link>
               </>
             ),
             centerArea: (

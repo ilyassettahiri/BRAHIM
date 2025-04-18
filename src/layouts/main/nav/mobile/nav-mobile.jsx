@@ -3,11 +3,13 @@ import { useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
+import { RouterLink } from 'src/routes/components';
+import Link from '@mui/material/Link';
 
 import { paths } from 'src/routes/paths';
 import { usePathname } from 'src/routes/hooks';
 
-import { Logo } from 'src/components/logo';
+
 import { NavUl } from 'src/components/nav-section';
 import { Scrollbar } from 'src/components/scrollbar';
 
@@ -38,11 +40,34 @@ export function NavMobile({ data, open, onClose, slots, sx }) {
         },
       }}
     >
-      {slots?.topArea ?? (
+
         <Box display="flex" sx={{ pt: 3, pb: 2, pl: 2.5 }}>
-          <Logo />
+
+
+
+                <Link
+                  component={RouterLink}
+                  href='/'
+                  underline="none"
+                  sx={{
+                    display: { xs: 'block', md: 'block' },
+                  }}
+                >
+                        <Box
+                          component="img"
+                          src="/assets/background/logo.jpeg"
+                          alt="Logo"
+                          sx={{
+                            height: 60,
+                            width: 'auto',
+
+                          }}
+                        />
+
+                </Link>
+
         </Box>
-      )}
+
 
       <Scrollbar fillContent>
         <Box component="nav" display="flex" flexDirection="column" flex="1 1 auto" sx={{ pb: 3 }}>

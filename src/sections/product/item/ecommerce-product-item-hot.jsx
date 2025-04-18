@@ -52,21 +52,6 @@ export function EcommerceProductItemHot({ product, isHot = false, sx }) {
           <ProductPrice price={product.price.prixApres} sx={{ ...(isHot && { color: 'error.main' }) }} />
         </Typography>
 
-        {isHot && (
-          <Box gap={1} display="flex" alignItems="center" sx={{ mt: 1, p:1 }}>
-            <LinearProgress
-              color="inherit"
-              variant="determinate"
-              value={(product.sold / product.stock) * 100}
-              sx={{ flex: '1 1 auto' }}
-            />
-
-            <Typography
-              variant="caption"
-              sx={{ flexShrink: 0, color: 'text.disabled' }}
-            >{`🔥 ${product.sold} vendu`}</Typography>
-          </Box>
-        )}
       </Paper>
     </Link>
   );

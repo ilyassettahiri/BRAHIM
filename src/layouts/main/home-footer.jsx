@@ -4,7 +4,8 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
-import { Logo } from 'src/components/logo';
+import { RouterLink } from 'src/routes/components';
+
 
 // ----------------------------------------------------------------------
 
@@ -20,7 +21,29 @@ export function HomeFooter({ sx, ...other }) {
           flexDirection: 'column',
         }}
       >
-        <Logo isSingle sx={{ mt: 1 }} />
+
+                <Link
+                  component={RouterLink}
+                   href='/'
+                  underline="none"
+                  sx={{
+                    display: { xs: 'block', md: 'block' },
+                  }}
+                >
+
+                        <Box
+                          component="img"
+                          src="/assets/background/logo.jpeg"
+                          alt="Logo"
+                          sx={{
+                            height: 80,
+                            width: 'auto',
+                            display: { xs: 'block', md: 'block' },
+                          }}
+                        />
+
+                </Link>
+
 
          {/* Three columns for informational links */}
          <Box
