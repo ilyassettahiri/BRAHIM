@@ -22,14 +22,14 @@ export function EcommerceProductItemCountDown({ product, sx, ...other }) {
         p: 3,
         minWidth: 0,
         borderRadius: 2,
-        color: 'primary.darker',
-        bgcolor: 'primary.lighter',
+        color: '#000',
+        bgcolor: '#f4f4f4',
         transition: (theme) =>
           theme.transitions.create('background-color', {
             easing: theme.transitions.easing.easeIn,
             duration: theme.transitions.duration.shortest,
           }),
-        '&:hover': { bgcolor: 'primary.light' },
+        '&:hover': { bgcolor: '#ddd' },
         ...sx,
       }}
       {...other}
@@ -42,7 +42,6 @@ export function EcommerceProductItemCountDown({ product, sx, ...other }) {
         sx={(theme) => ({
           aspectRatio: '1/1',
           objectFit: 'cover',
-          filter: `drop-shadow(20px 20px 24px ${varAlpha(theme.vars.palette.common.blackChannel, 0.16)})`,
         })}
       />
 
@@ -52,14 +51,14 @@ export function EcommerceProductItemCountDown({ product, sx, ...other }) {
           href={`/products/${product.id}/`}
           color="inherit"
           underline="none"
-          variant="subtitle2"
+          variant="h5"
           noWrap
           sx={{ mb: 1, opacity: 0.72 }}
         >
           {product.name}
         </Link>
 
-        <Typography variant="h5">{`À partir de ${fCurrency(product.price.prixApres)}`}</Typography>
+        <Typography variant="body">{`À partir de ${fCurrency(product.price.prixApres)}`}</Typography>
       </Box>
 
 

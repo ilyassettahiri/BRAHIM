@@ -3,7 +3,6 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 
-import { EcommerceProductItemHot } from '../product/item/ecommerce-product-item-hot';
 import { EcommerceProductItemCountDown } from '../product/item/ecommerce-product-item-count-down';
 
 // ----------------------------------------------------------------------
@@ -43,9 +42,7 @@ export function EcommerceLandingFeaturedProducts({ sx, largeProducts, smallProdu
                   product={product}
                   sx={{
                     ...(index === 1 && {
-                      color: 'secondary.darker',
-                      bgcolor: 'secondary.lighter',
-                      '&:hover': { bgcolor: 'secondary.light' },
+
                     }),
                   }}
                 />

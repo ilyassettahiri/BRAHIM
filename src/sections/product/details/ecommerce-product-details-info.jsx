@@ -106,9 +106,11 @@ export function EcommerceProductDetailsInfo({ sx, product, ...other }) {
      quantity: quantity,
      productId: product?.id,
      productName: product?.name,
+     productPrice: product?.price.prixApres,
      productCategory: product?.category,
      size: size,
      color: color,
+     totalPrice: quantity * product?.price.prixApres,
    };
 
    console.log('Submitting Order Data:', orderData);

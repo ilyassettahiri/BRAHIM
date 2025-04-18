@@ -24,6 +24,8 @@ export default async function handler(req, res) {
     quantity,
     productId,
     productName,
+    productPrice,
+    totalPrice,
     productCategory, // Make sure this is sent from the frontend if needed
     size,
     color,
@@ -31,7 +33,7 @@ export default async function handler(req, res) {
 
   // Basic input validation - include checks for new required fields like size and color
   // Adjust validation based on your actual requirements
-  if (!fullName || !phone || !city || !size || !color || !quantity || !productId || !productName) {
+  if (!fullName || !phone || !city || !size || !color || !quantity || !productId || !productName || !productPrice || !totalPrice) {
      // Construct a more specific error message if possible
      const missingFields = [
         !fullName && 'fullName',
@@ -42,6 +44,8 @@ export default async function handler(req, res) {
         !quantity && 'quantity',
         !productId && 'productId',
         !productName && 'productName',
+        !productPrice && 'productPrice',
+        !totalPrice && 'totalPrice',
      ].filter(Boolean).join(', '); // Filter out falsy values and join
 
      return res.status(400).json({ message: `Missing required fields: ${missingFields || 'Check input'}` });
@@ -79,6 +83,9 @@ export default async function handler(req, res) {
       productCategory || '', // Column G (use empty string if category might be missing)
       size,              // Column H
       color,             // Column I
+
+      productPrice,
+      totalPrice,
       new Date().toLocaleString('fr-MA', { timeZone: 'Africa/Casablanca' }), // Column J - Timestamp (Morocco timezone)
       // Add more fields here if needed, and adjust the range below
     ];
