@@ -10,10 +10,10 @@ import { Iconify } from 'src/components/iconify';
 export function ProductOptionPicker({
   sx,
   color,
-  memory,
+  size,
   options,
   onSelectColor,
-  onSelectMemory,
+  onSelectSize,
   ...other
 }) {
   const renderColorOptions = (
@@ -81,15 +81,15 @@ export function ProductOptionPicker({
   );
 
 
-  const renderMemoryOptions = (
+  const renderSizeOptions = (
     <Box gap={1.5} display="flex" flexWrap="wrap">
-      {options.memory.map((option) => {
-        const selected = memory === option.value;
+      {options.size.map((option) => {
+        const selected = size === option.value;
 
         return (
           <Box
             key={option.value}
-            onClick={() => onSelectMemory(option.value)}
+            onClick={() => onSelectSize(option.value)}
             sx={{
               py: 1,
               px: 2.5,
@@ -125,7 +125,7 @@ export function ProductOptionPicker({
         Choisir la pointure
 
         </Typography>
-        {renderMemoryOptions}
+        {renderSizeOptions}
       </div>
     </Box>
   );

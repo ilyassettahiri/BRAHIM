@@ -63,12 +63,9 @@ export function EcommerceProductView({ product }) {
 
           <Grid xs={12} md={6} lg={5}>
             <EcommerceProductDetailsInfo
-              name={product?.name || ''}
+              product={product}
 
-              price={product?.price.prixApres || 0}
-              caption={product?.caption || ''}
-              priceSale={product?.price.prixAvant || 0}
-              id={product?.id || ''}
+
 
 
             />
