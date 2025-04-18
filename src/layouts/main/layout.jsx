@@ -83,7 +83,7 @@ export function MainLayout({ sx, children, header }) {
 
                       <Box
                         component="img"
-                        src="/assets/background/logo.jpeg"
+                        src="/assets/background/logo.png"
                         alt="Logo"
                         sx={{
                           height: 60,

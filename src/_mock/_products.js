@@ -18,9 +18,9 @@ const PRODUCTS_META = [
 
   { name: 'Chaussures AF9 en Cuir', category: 'Chaussures Classiques' },
 
-  { name: 'title 8', category: 'Accessoires' },
+  { name: 'Sandales Orthopédiques Cuimed', category: 'Sandales' },
 
-  { name: 'title 9', category: 'Sandales' },
+
 ];
 
 
@@ -51,7 +51,7 @@ const PRICES = [
 
   { prixAvant: 40000, prixApres: 28900 },
 
-  { prixAvant: 40000, prixApres: 53900 },
+  { prixAvant: 40000, prixApres: 28900 },
 
 ];
 
@@ -132,7 +132,10 @@ const PRODUCT_GALLERIES = [
     `${CONFIG.assetsDir}/assets/products/p8/2.webp`,
     `${CONFIG.assetsDir}/assets/products/p8/3.webp`,
     `${CONFIG.assetsDir}/assets/products/p8/4.webp`,
-
+    `${CONFIG.assetsDir}/assets/products/p8/5.webp`,
+    `${CONFIG.assetsDir}/assets/products/p8/6.webp`,
+    `${CONFIG.assetsDir}/assets/products/p8/7.webp`,
+    `${CONFIG.assetsDir}/assets/products/p8/8.webp`,
 
   ],
 
@@ -192,16 +195,28 @@ const DESCRIPTION = [
 
   `
 
-      <h5>despt 8</h5>
+
+      <div class="tt-collapse-title shipping-title"><b>Nous sommes heureux de vous informer que la marque CUIMED est désormais présente dans votre région et vous propose l'option de paiement à la livraison pour vos achats.</b></div>
+      <div class="tt-collapse-content  shipping-description">Nous vous rappelons que cette option de paiement est sûre et pratique, vous permettant de vérifier la qualité et la conformité de votre commande avant de procéder au paiement. <br></div>
+
+
+          <div class="tt-collapse-title" style="pointer-events: none; padding-bottom: 0px;"></div>
+          <div class="tt-collapse-content"><h3 style="text-align: center;"><strong><br></strong></h3>
+      <h3 style="text-align: center;" data-mce-style="text-align: center;"><strong><img src="https://cdn.shopify.com/s/files/1/0727/7124/0263/files/SBNMcuir100_480x480.gif?v=1691001686" alt="cuir naturel" data-mce-src="https://cdn.shopify.com/s/files/1/0727/7124/0263/files/SBNMcuir100_480x480.gif?v=1691001686"></strong></h3>
+      <h1 style="text-align: center;"><strong>100% cuir naturel&nbsp;</strong></h1>
+      <h3 style="text-align: center;" data-mce-style="text-align: center;"><strong><img src="https://cdn.shopify.com/s/files/1/0727/7124/0263/files/SBNMsemelleinterne_480x480.gif?v=1691001833" alt="semelle confort" data-mce-src="https://cdn.shopify.com/s/files/1/0727/7124/0263/files/SBNMsemelleinterne_480x480.gif?v=1691001833"></strong></h3>
+      <h1 style="text-align: center;"><strong>Semelle interne et externe ultra-confort&nbsp;</strong></h1>
+      <h3 style="text-align: center;" data-mce-style="text-align: center;">
+      <strong></strong><strong><img src="https://cdn.shopify.com/s/files/1/0727/7124/0263/files/SBNMsemelleexterne_480x480.gif?v=1691001916" alt="cuir et élégance" data-mce-src="https://cdn.shopify.com/s/files/1/0727/7124/0263/files/SBNMsemelleexterne_480x480.gif?v=1691001916"></strong>
+      </h3>
+      <h1 style="text-align: center;">Cuir &amp; élégance&nbsp;</h1>
+      <p style="text-align: center;">&nbsp;</p></div>
+
 
   `,
 
 
-  `
 
-      <h5>despt 9</h5>
-
-  `,
 ];
 
 const _ids = Array.from({ length: 40 }, (_, i) => `p${i + 1}`);
