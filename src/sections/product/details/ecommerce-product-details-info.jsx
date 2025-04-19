@@ -125,10 +125,19 @@ export function EcommerceProductDetailsInfo({ sx, product, ...other }) {
      const result = await response.json();
 
      if (response.ok) {
-       console.log('Data stored successfully:', result.message);
-       router.push('/order-completed');
-       // No need to reset form fields or setIsSubmitting(false) here because of redirection
-     } else {
+
+      const query = new URLSearchParams({
+        total: orderData.totalPrice,
+        id: orderData.productId,
+        name: orderData.productName,
+        quantity: orderData.quantity,
+        price: orderData.productPrice,
+      });
+
+      router.push(`/order-completed?${query.toString()}`);
+
+
+    } else {
        console.error('Error storing data:', result.message);
        // Show error message to the user
        setErrors(prev => ({ ...prev, general: `Erreur lors de l'envoi: ${result.message || 'Veuillez réessayer.'}` }));

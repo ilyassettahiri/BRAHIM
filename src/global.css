@@ -19,8 +19,6 @@
 /** **************************************
 * Plugins
 *************************************** */
-/* scrollbar */
-@import './components/scrollbar/styles.css';
 
 /* image */
 @import './components/image/styles.css';

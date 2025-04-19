@@ -34,9 +34,6 @@ function WhatsAppIcon(props) {
 
 export function EcommerceProductView({ product }) {
 
-  useEffect(() => {
-    console.log('Product:', product);
-  }, [product]);
 
 
   const whatsappNumber = '212629249926';          // no + or spaces
@@ -44,6 +41,18 @@ export function EcommerceProductView({ product }) {
   const waText         = `Bonjour, je suis intéressé par l'achat de ${product.name} ${productUrl}`;
   const waLink         = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(waText)}`;
 
+
+  useEffect(() => {
+    if (typeof window.fbq !== 'undefined') {
+      window.fbq('track', 'ViewContent', {
+        content_name: product.name,
+        content_ids: [product.id],
+        content_type: 'product',
+        value: product.price?.prixApres || 0,
+        currency: 'CFA',
+      });
+    }
+  }, [product]);
 
   return (
     <>
@@ -92,7 +101,7 @@ export function EcommerceProductView({ product }) {
           </Grid>
         </Grid>
 
-        <Divider sx={{my: 3 }} />
+        <Divider />
 
                   <EcommerceLandingHotDealToday products={_products} />
 

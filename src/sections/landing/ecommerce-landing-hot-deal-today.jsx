@@ -30,7 +30,7 @@ export function EcommerceLandingHotDealToday({ products, sx, ...other }) {
     <Box
       component="section"
       sx={{
-        py: { xs: 5, md: 8 },
+        py: { xs: 2, md: 5 },
         ...sx,
       }}
       {...other}
@@ -41,7 +41,7 @@ export function EcommerceLandingHotDealToday({ products, sx, ...other }) {
           display="flex"
           alignItems="center"
           flexDirection={{ xs: 'column', md: 'row' }}
-          sx={{ mb: { xs: 5, md: 8 } }}
+          sx={{ mb: { xs: 2, md: 5 } }}
         >
           <Typography variant="h3" sx={{ textAlign: { xs: 'center', md: 'unset' } }}>
 

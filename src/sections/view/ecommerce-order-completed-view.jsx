@@ -1,11 +1,12 @@
 'use client';
 
-import { m } from 'framer-motion';
+import { useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import { useSearchParams } from 'next/navigation';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
@@ -15,6 +16,35 @@ import { Iconify } from 'src/components/iconify';
 // ----------------------------------------------------------------------
 
 export function EcommerceOrderCompletedView() {
+
+  const searchParams = useSearchParams();
+
+  const total = parseFloat(searchParams.get('total') || '0');
+  const id = searchParams.get('id');
+  const name = searchParams.get('name');
+  const quantity = parseInt(searchParams.get('quantity') || '1');
+  const price = parseFloat(searchParams.get('price') || '0');
+
+  useEffect(() => {
+    if (typeof window.fbq !== 'undefined' && id && name) {
+      window.fbq('track', 'Purchase', {
+        value: total,
+        currency: 'CFA',
+        content_ids: [id],
+        content_type: 'product',
+        content_name: name,
+        num_items: quantity,
+        contents: [
+          {
+            id,
+            quantity,
+            item_price: price,
+          },
+        ],
+      });
+    }
+  }, [total, id, name, quantity, price]);
+
   return (
     <Container
       sx={{
