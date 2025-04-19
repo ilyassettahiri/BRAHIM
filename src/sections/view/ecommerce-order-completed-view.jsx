@@ -1,12 +1,11 @@
 'use client';
 
 import { useEffect } from 'react';
-
+import { useRouter } from 'next/navigation';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import { useSearchParams } from 'next/navigation';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
@@ -17,16 +16,17 @@ import { Iconify } from 'src/components/iconify';
 
 export function EcommerceOrderCompletedView() {
 
-  const searchParams = useSearchParams();
+  const router = useRouter();
+  const state = router?.state;
 
-  const total = parseFloat(searchParams.get('total') || '0');
-  const id = searchParams.get('id');
-  const name = searchParams.get('name');
-  const quantity = parseInt(searchParams.get('quantity') || '1');
-  const price = parseFloat(searchParams.get('price') || '0');
+  const total = state?.total || 0;
+  const id = state?.id;
+  const name = state?.name;
+  const quantity = state?.quantity || 1;
+  const price = state?.price || 0;
 
   useEffect(() => {
-    if (typeof window.fbq !== 'undefined' && id && name) {
+    if (typeof window.fbq !== 'undefined') {
       window.fbq('track', 'Purchase', {
         value: total,
         currency: 'CFA',
@@ -35,11 +35,7 @@ export function EcommerceOrderCompletedView() {
         content_name: name,
         num_items: quantity,
         contents: [
-          {
-            id,
-            quantity,
-            item_price: price,
-          },
+          { id, quantity, item_price: price },
         ],
       });
     }

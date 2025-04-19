@@ -126,15 +126,16 @@ export function EcommerceProductDetailsInfo({ sx, product, ...other }) {
 
      if (response.ok) {
 
-      const query = new URLSearchParams({
-        total: orderData.totalPrice,
-        id: orderData.productId,
-        name: orderData.productName,
-        quantity: orderData.quantity,
-        price: orderData.productPrice,
+      router.push('/order-completed', {
+        state: {
+          total: orderData.totalPrice,
+          id: orderData.productId,
+          name: orderData.productName,
+          quantity: orderData.quantity,
+          price: orderData.productPrice,
+        },
       });
 
-      router.push(`/order-completed?${query.toString()}`);
 
 
     } else {
