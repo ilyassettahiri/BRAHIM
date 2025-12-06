@@ -20,6 +20,8 @@ const PRODUCTS_META = [
 
   { name: 'Sandales Orthopédiques Cuimed', category: 'Sandales' },
 
+    { name: 'Chaussure VL01 en cuir || CI', category: 'Chaussures Classiques' },
+
 
 ];
 
@@ -53,6 +55,7 @@ const PRICES = [
 
   { prixAvant: 40000, prixApres: 28900 },
 
+  { prixAvant: 40000, prixApres: 29900 },
 ];
 
 const PRODUCT_GALLERIES = [
@@ -140,6 +143,17 @@ const PRODUCT_GALLERIES = [
   ],
 
 
+  [
+    `${CONFIG.assetsDir}/assets/products/p9/1.webp`,
+    `${CONFIG.assetsDir}/assets/products/p9/2.webp`,
+    `${CONFIG.assetsDir}/assets/products/p9/3.webp`,
+    `${CONFIG.assetsDir}/assets/products/p9/4.webp`,
+    `${CONFIG.assetsDir}/assets/products/p9/5.webp`,
+
+
+  ],
+
+
 ];
 
 const DESCRIPTION = [
@@ -217,6 +231,12 @@ const DESCRIPTION = [
 
 
 
+  `
+
+  <div class="single-description fr-view"><h2 style="text-align: left;">Chaussure VL01 en cuir : Support et Soulagement Quotidien</h2><p><br></p><ul style="list-style-type: disc;"><li><strong>Confort Supérieur :</strong> S'adapte parfaitement à la forme de vos pieds.</li><li><strong>Support Optimal :</strong> Semelle intérieure ergonomique et rembourrée.</li><li><strong>Soulagement des Douleurs :</strong> Atténue les douleurs grâce à un soutien adéquat.</li><li><strong>Style Élégant :</strong> Design classique et intemporel.</li><li><strong>Durabilité :</strong> Cuir de haute qualité, robuste et résistant.</li></ul><p><br></p><h2>Spécifications des chaussures :</h2><p><br></p><div class="fr-img-space-wrap"><span class="fr-img-caption fr-fic fr-dib" style="width: 300px;"><span class="fr-img-wrap"><img src="https://cdn.youcan.shop/stores/2c8ca74e8aab2e9911be1c822fb59926/others/Fq5O8unprXqytRHWRZ60XoHdj5HoOW7PtYlz6XoA.png" data-name="stores/2c8ca74e8aab2e9911be1c822fb59926/others/Fq5O8unprXqytRHWRZ60XoHdj5HoOW7PtYlz6XoA.png"><span class="fr-inner"><img src="https://cdn.youcan.shop/stores/2c8ca74e8aab2e9911be1c822fb59926/others/Xg3T8GMHb9FO7OYH2Ob2Zgn70egAZshLH4IzALci.png" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/2c8ca74e8aab2e9911be1c822fb59926/others/Xg3T8GMHb9FO7OYH2Ob2Zgn70egAZshLH4IzALci.png"><img src="https://cdn.youcan.shop/stores/2c8ca74e8aab2e9911be1c822fb59926/others/vovCi3wp5SGaQGJteOs94ej14j1sLRJsXjC1fMKI.png" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/2c8ca74e8aab2e9911be1c822fb59926/others/vovCi3wp5SGaQGJteOs94ej14j1sLRJsXjC1fMKI.png"><br></span></span></span><p class="fr-img-space-wrap2">&nbsp;</p></div><ul style="list-style-type: disc;"><li><strong>Tige / Dessus :</strong> 100% cuir.&nbsp;</li><li><strong>Semelle intérieure</strong> en Cuir confortable. &nbsp; &nbsp;</li><li><strong>Semelle extérieure:&nbsp;</strong>antidérapante Extra-light, confortable. &nbsp;</li></ul><p><br></p><h2>Utilisation :</h2><p><br></p><ul style="list-style-type: disc;"><li><strong>Quotidienne :</strong> Travail, sorties décontractées, longues promenades.</li><li><strong>Voyages :</strong> Confort et praticité idéaux pour les voyages.</li><li><strong>Occasions Spéciales :</strong> Convient pour des événements formels.</li></ul><p><br></p><h2><span style="color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-kerning: none;">Testez-nous sans risque</span></h2><h2><br><img src="https://cdn.youcan.shop/stores/2c8ca74e8aab2e9911be1c822fb59926/others/NGJGhnxxQpjnWJW2IxaxkY8ut2MMGeb8nRaQa4AX.webp" style="width: 300px;" class="fr-fic fr-dib" data-name="stores/2c8ca74e8aab2e9911be1c822fb59926/others/NGJGhnxxQpjnWJW2IxaxkY8ut2MMGeb8nRaQa4AX.webp"></h2><ul style="list-style-type: disc;"><li>Livraison <strong>gratuite&nbsp;</strong>sous 48H</li><li>Paiement en espèces à la livraison</li><li>Essayer avant de payer</li><li>Prenez votre taille habituelle, ca marche pour 95% de nos clients.</li></ul><h2><br><p><br></p></h2></div>
+
+  `,
+
 ];
 
 const _ids = Array.from({ length: 40 }, (_, i) => `p${i + 1}`);
@@ -242,7 +262,7 @@ export const _products = PRODUCTS_META.map((meta, i) => {
 
   return {
     id: id(i),
-    stock: 100,
+    stock: 10000,
     name: meta.name,              // ✅ now meta is defined
     category: meta.category,
     description: DESCRIPTION[i % DESCRIPTION.length],

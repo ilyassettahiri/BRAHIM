@@ -35,12 +35,12 @@ export function EcommerceProductViewGridItem({ product, sx, ...other }) {
       }}
       {...other}
     >
-      {(product.label === 'new' || product.label === 'sale') && (
+      {/* {(product.label === 'new' || product.label === 'sale') && (
         <Box gap={1} display="flex" sx={{ position: 'absolute', top: 8, right: 8, zIndex: 9 }}>
           {product.label === 'new' && <Label color="info">NOUVEAU</Label>}
           {product.label === 'sale' && <Label color="error">SOLDE</Label>}
         </Box>
-      )}
+      )} */}
 
       <Box sx={{ position: 'relative', mb: 2 }}>
         <Fab
